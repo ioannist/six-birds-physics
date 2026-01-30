@@ -1,0 +1,40 @@
+\subsection*{Lean coverage}
+\begin{itemize}[leftmargin=*]
+  \item \texttt{EmergenceCalc.U\_uniform}\\
+    uniform lift/completion for equal-fiber partition lens (Prod.fst : X$\times$Fin m $\to$ X).\\
+    {\footnotesize\texttt{lean/EmergenceCalc/Physics/UniformLift.lean}}
+  \item \texttt{EmergenceCalc.section\_uniform}\\
+    proves Q\_f (U\_uniform $\nu$) = $\nu$ (section axiom).\\
+    {\footnotesize\texttt{lean/EmergenceCalc/Physics/UniformLift.lean}}
+  \item \texttt{EmergenceCalc.E\_idempotent\_uniform}\\
+    idempotence of the induced closure E = U$\circ$Q for uniform lift.\\
+    {\footnotesize\texttt{lean/EmergenceCalc/Physics/UniformLift.lean}}
+  \item \texttt{EmergenceCalc.FactorsThrough}\\
+    factorization property: micro dynamics respects coarse map and preserves uniform fibers.\\
+    {\footnotesize\texttt{lean/EmergenceCalc/Physics/Factorization.lean}}
+  \item \texttt{EmergenceCalc.commutes\_of\_factorsThrough}\\
+    commutation E(T $\mu$)=T(E $\mu$) under factorization.\\
+    {\footnotesize\texttt{lean/EmergenceCalc/Physics/Factorization.lean}}
+  \item \texttt{EmergenceCalc.TV\_Q\_f\_le}\\
+    total variation contraction under deterministic pushforward.\\
+    {\footnotesize\texttt{lean/EmergenceCalc/Physics/TotalVariation.lean}}
+  \item \texttt{EmergenceCalc.card\_DefPred}\\
+    fiber-constant predicates count = $2^{\text{card }X}$ under surjective lens.\\
+    {\footnotesize\texttt{lean/EmergenceCalc/Physics/DefinabilityCount.lean}}
+  \item \texttt{EmergenceCalc.card\_DefPred\_range}\\
+    generalization: count = $2^{\text{card(range }f)}$.\\
+    {\footnotesize\texttt{lean/EmergenceCalc/Physics/DefinabilityCount.lean}}
+  \item \texttt{EmergenceCalc.card\_DefPred\_fst}\\
+    specialization for Prod.fst : X$\times$Fin m $\to$ X.\\
+    {\footnotesize\texttt{lean/EmergenceCalc/Physics/DefinabilityCount.lean}}
+\end{itemize}
+
+\subsection*{Build command}
+\begin{verbatim}
+cd lean && lake build
+\end{verbatim}
+
+\subsection*{Toolchain pins}
+\begin{verbatim}
+lean/lean-toolchain: leanprover/lean4:v4.27.0
+\end{verbatim}

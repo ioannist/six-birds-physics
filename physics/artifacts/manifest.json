@@ -1,0 +1,163 @@
+{
+  "artifacts": [
+    {
+      "created_by": "physics/python/fluids/bgk_failure_modes.py",
+      "desc": "BGK closure failure modes",
+      "kind": "csv",
+      "path": "physics/artifacts/bgk_failure_modes.csv",
+      "seed": 50
+    },
+    {
+      "created_by": "physics/python/fluids/bgk_failure_modes.py",
+      "desc": "BGK failure modes plot",
+      "kind": "png",
+      "path": "physics/artifacts/bgk_failure_modes.png",
+      "seed": 50
+    },
+    {
+      "created_by": "physics/python/fluids/bgk_discrete.py",
+      "desc": "BGK idempotence defect (per trial)",
+      "kind": "csv",
+      "path": "physics/artifacts/bgk_idempotence_defect.csv",
+      "seed": 40
+    },
+    {
+      "created_by": "physics/python/fluids/bgk_discrete.py",
+      "desc": "BGK idempotence defect plot",
+      "kind": "png",
+      "path": "physics/artifacts/bgk_idempotence_defect.png",
+      "seed": 40
+    },
+    {
+      "created_by": "physics/python/fluids/bgk_discrete.py",
+      "desc": "BGK idempotence defect summary",
+      "kind": "csv",
+      "path": "physics/artifacts/bgk_summary.csv",
+      "seed": 40
+    },
+    {
+      "created_by": "physics/python/gravity/backreaction_toy.py",
+      "desc": "Backreaction toy mismatch over time",
+      "kind": "csv",
+      "path": "physics/artifacts/gravity_backreaction.csv",
+      "seed": 80
+    },
+    {
+      "created_by": "physics/python/gravity/backreaction_toy.py",
+      "desc": "Backreaction toy abs mismatch vs time",
+      "kind": "png",
+      "path": "physics/artifacts/gravity_backreaction.png",
+      "seed": 80
+    },
+    {
+      "created_by": "physics/python/gravity/packaging_view.py",
+      "desc": "Gravity packaging route mismatch and idempotence",
+      "kind": "csv",
+      "path": "physics/artifacts/gravity_packaging_mismatch.csv",
+      "seed": 90
+    },
+    {
+      "created_by": "physics/python/gravity/packaging_view.py",
+      "desc": "Gravity packaging route mismatch vs time",
+      "kind": "png",
+      "path": "physics/artifacts/gravity_packaging_mismatch.png",
+      "seed": 90
+    },
+    {
+      "created_by": "physics/python/les/burgers_1d.py",
+      "desc": "LES Burgers filter/evolve mismatch",
+      "kind": "csv",
+      "path": "physics/artifacts/les_route_mismatch.csv",
+      "seed": 60
+    },
+    {
+      "created_by": "physics/python/les/burgers_1d.py",
+      "desc": "LES Burgers mismatch vs time",
+      "kind": "png",
+      "path": "physics/artifacts/les_route_mismatch.png",
+      "seed": 60
+    },
+    {
+      "created_by": "physics/python/les/subgrid_term.py",
+      "desc": "LES subgrid term stats over time",
+      "kind": "csv",
+      "path": "physics/artifacts/les_subgrid_term.csv",
+      "seed": 70
+    },
+    {
+      "created_by": "physics/python/les/subgrid_term.py",
+      "desc": "LES subgrid term L2 vs time",
+      "kind": "png",
+      "path": "physics/artifacts/les_subgrid_term.png",
+      "seed": 70
+    },
+    {
+      "created_by": "physics/python/quantum/_checks.py",
+      "desc": "Quantum checks summary",
+      "kind": "json",
+      "path": "physics/artifacts/quantum_checks_summary.json",
+      "seed": 10
+    },
+    {
+      "created_by": "physics/python/quantum/closure.py",
+      "desc": "Quantum closure idempotence plot",
+      "kind": "png",
+      "path": "physics/artifacts/quantum_closure_idempotence.png",
+      "seed": 30
+    },
+    {
+      "created_by": "physics/python/quantum/dpi.py",
+      "desc": "Quantum DPI histogram",
+      "kind": "png",
+      "path": "physics/artifacts/quantum_dpi_hist.png",
+      "seed": 20
+    },
+    {
+      "created_by": "physics/python/quantum/dpi.py",
+      "desc": "Quantum DPI summary",
+      "kind": "csv",
+      "path": "physics/artifacts/quantum_dpi_summary.csv",
+      "seed": 20
+    },
+    {
+      "created_by": "physics/python/quantum/closure.py",
+      "desc": "Quantum route mismatch grid",
+      "kind": "csv",
+      "path": "physics/artifacts/quantum_route_mismatch.csv",
+      "seed": 30
+    },
+    {
+      "created_by": "physics/python/quantum/closure.py",
+      "desc": "Quantum route mismatch plot",
+      "kind": "png",
+      "path": "physics/artifacts/quantum_route_mismatch.png",
+      "seed": 30
+    },
+    {
+      "created_by": "physics/python/_smoke_test.py",
+      "desc": "Smoke test CSV for core calculus",
+      "kind": "csv",
+      "path": "physics/artifacts/smoke_core.csv",
+      "seed": 0
+    },
+    {
+      "created_by": "physics/python/_smoke_test.py",
+      "desc": "Smoke test plot for core calculus",
+      "kind": "png",
+      "path": "physics/artifacts/smoke_core.png",
+      "seed": 0
+    },
+    {
+      "created_by": "physics/python/fluids/bgk_failure_modes.py",
+      "desc": "BGK failure modes note",
+      "kind": "md",
+      "path": "physics/notes/bgk_failure_modes.md",
+      "seed": 50
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-01-28T19:30:13Z",
+    "generator": "physics/python/run_all.py",
+    "seed_base": 0
+  }
+}

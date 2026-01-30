@@ -1,0 +1,25 @@
+\section{Related work}
+\label{sec:related}
+
+Our goal is not to re-derive standard physics limits, but to re-express several familiar modeling transitions in a uniform Six-Birds dictionary: a \emph{lens} specifies retained macro information, a \emph{completion} specifies a canonical family consistent with that macro information, and the resulting \emph{closure/packaging} is diagnosed by idempotence, audit monotonicity (data processing), and route mismatch.
+
+\subsection{Quantum audits, DPI, and decoherence closures}
+The quantum data processing inequality (DPI)---audit monotonicity for relative entropy under CPTP maps---is a foundational result in quantum information theory. Early treatments appear in Lindblad and Petz; standard texts provide modern expositions \citep{lindblad1975,petz1986,nielsenchuang2010,wilde2017}. Dephasing and related decoherence mechanisms are central examples of quantum-to-classical closures, with modern reviews emphasizing environment-induced suppression of coherences and basis selection \citep{zurek2003,schlosshauer2007}.
+
+\subsection{Kinetic theory, BGK relaxation, and moment closures}
+The BGK model simplifies Boltzmann collision structure to capture relaxation toward local equilibrium \citep{bhatnagar1954bgk}. Standard references discuss equilibrium families, scaling limits, and the role of moments \citep{cercignani1988}. Moment-closure hierarchies, including maximum-entropy closures, are developed systematically in applied mathematics; Levermore provides a widely cited formulation \citep{levermore1996}.
+
+\subsection{LES filtering and subgrid terms}
+LES is a canonical setting where the lens (filtering) is explicit and noncommutation with nonlinear dynamics generates exact ``subgrid'' correction terms. Classical turbulence/LES references review this filtering approach \citep{germano1992,pope2000,sagaut2006}. Decomposition of subgrid contributions, including the Leonard term, appears in early LES analyses \citep{leonard1974}; practical closures trace back to classic eddy-viscosity modeling \citep{smagorinsky1963}.
+
+\subsection{Multiscale reduction formalisms}
+\begin{sloppypar}
+Projection-operator methods (Mori--Zwanzig), renormalization-group approaches, and effective field theory aim to derive reduced dynamics from microscopic models \citep{zwanzig1961,mori1965,wilsonkogut1974,georgi1993}.
+Our emphasis is complementary: rather than deriving a single reduced equation, we provide a uniform lens/closure diagnostic ledger (coherence, audit monotonicity, mismatch) with deterministic certificates across physics instantiations.
+\end{sloppypar}
+
+\subsection{Averaging and backreaction in cosmology}
+Averaging and fitting problems for nonlinear field equations motivate extensive work on backreaction and effective dynamics. Buchert's averaging framework is influential in inhomogeneous cosmology \citep{buchert2000,buchert2001}; broad reviews discuss conceptual and observational issues \citep{clarkson2011}. Complementary perspectives examine when small-scale structure feeds back into large-scale dynamics \citep{greenwald2011}.
+
+\subsection{Positioning}
+This paper is closest in spirit to work treating coarse-graining as an operator choice (what is retained and how it is completed) and using invariants to compare closures across domains. Our contribution is packaging several standard physics examples into a single, reproducible operator template aligned with the Six-Birds ``certificate loop,'' with deterministic scripts producing all figures and tables.

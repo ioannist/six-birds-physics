@@ -1,0 +1,76 @@
+\section{Gravity/backreaction toy: nonlinear averaging as route mismatch}
+\label{sec:gravity}
+
+A recurring theme in gravitational modeling is that \emph{averaging} and \emph{dynamics} do not commute. In full general relativity, the Einstein equations are nonlinear, and coarse-graining (spatial averaging, smoothing, or fitting an effective homogeneous model) can produce effective correction terms often discussed under the umbrella of ``backreaction'' \citep{buchert2000,buchert2001,clarkson2011,greenwald2011}. We do not attempt to model GR directly here. Instead, we isolate the structural point in a minimal setting where the mechanism is unambiguous: \emph{nonlinearity alone} is enough to generate a mismatch between ``evolve then average'' and ``average then evolve.''
+
+\subsection{Why mismatch is generic under nonlinearity}
+Let $y(t)$ evolve by a nonlinear rule. If we start from heterogeneous micro initial conditions, then even a simple macro lens such as an average typically fails to commute with evolution:
+\[
+  \mathbb{E}[y(t)] \neq \tilde{y}(t)\quad\text{where}\quad \tilde{y}(0)=\mathbb{E}[y(0)].
+\]
+This is the same phenomenon as Jensen-type effects: applying a nonlinear map and then averaging is not the same as averaging and then applying the nonlinear map.
+
+In Six-Birds terms, the ``average'' is a lens, the macro evolution is an attempted factorization through that lens, and the discrepancy is a route mismatch.
+
+\subsection{Toy model: an ensemble of nonlinear ODEs}
+Our micro description is an ensemble of scalar states $y_i(t)$ evolving under the nonlinear ODE
+\[
+  y'(t)=y(t)^2,
+\]
+which has the closed-form solution $y(t)=y_0/(1-ty_0)$.
+We choose this example because it isolates the mechanism (nonlinearity + heterogeneity) and makes the micro evolution operator unambiguous.
+In the experiment we restrict initial conditions and times to stay away from finite-time blow-up, so the mismatch signal is not a numerical artifact.
+Heterogeneity enters through the distribution of initial conditions. We compare two routes:
+\begin{enumerate}
+  \item \textbf{Evolve then average:} evolve the full ensemble to time $t$ and compute the mean.
+  \item \textbf{Average then evolve:} average the initial ensemble to obtain a single macro initial condition and evolve that single state.
+\end{enumerate}
+The resulting mismatch is a direct measure of how much information is lost by representing a heterogeneous micro state using only its mean when the dynamics is nonlinear.
+
+\subsection{Backreaction-style mismatch versus heterogeneity}
+Figure~\ref{fig:gravity-backreaction} plots the mismatch magnitude as a function of time and a heterogeneity scale parameter. The key qualitative behavior is:
+\begin{itemize}
+  \item with zero heterogeneity, the two routes agree (mismatch $\approx 0$);
+  \item with increasing heterogeneity, the mismatch becomes nontrivial and grows.
+\end{itemize}
+Table~\ref{tab:gravity-backreaction} summarizes the same trend with a compact ``max mismatch over time'' statistic across heterogeneity settings.
+
+\subsection{Packaging view in $(\Qf,\Uf,E)$ language}
+We can rewrite the same toy in explicit closure form to match the operator template used throughout the paper. Treat the micro state at time $t$ as a distribution $\mu_t$ over micro values. Choose a coarse lens $\Qf$ that extracts a small set of coarse statistics (e.g.\ mean and variance). Choose a completion $\Uf$ that reconstructs a canonical micro distribution consistent with those coarse statistics (in our toy, a Gaussian-style completion is convenient). This induces a closure
+\[
+  E_f := \Uf\circ\Qf.
+\]
+In this language, the two routes become
+\[
+  \text{(A)}\quad E_f(T_t(\mu_0))
+  \qquad\text{and}\qquad
+  \text{(B)}\quad T_t(E_f(\mu_0)),
+\]
+and their discrepancy is the same route mismatch diagnostic used in earlier sections.
+
+Figure~\ref{fig:gravity-packaging-mismatch} visualizes the mismatch measured in this packaging language, and Table~\ref{tab:gravity-packaging} reports summary statistics. Two points are worth emphasizing:
+\begin{itemize}
+  \item the closure itself can be (numerically) coherent/idempotent for the chosen completion family,
+  \item yet the closure can still fail to commute with nonlinear dynamics once heterogeneity is present.
+\end{itemize}
+This separation matches the general Six-Birds lesson: \emph{coherent packaging} (idempotence) does not guarantee \emph{dynamical closure} (commutation).
+
+\subsection{Takeaway}
+This toy illustrates the gravitational moral in a form that is portable across domains: when the micro dynamics is nonlinear and the macro lens discards heterogeneity, route mismatch is generically produced. In full GR, the corresponding mismatch is one way to understand why fitting an averaged effective model can require additional correction terms---a ``backreaction'' in the broad structural sense.
+
+\input{autogen/table_gravity_backreaction}
+\input{autogen/table_gravity_packaging}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{\figGravityBackreaction}
+  \caption{Nonlinear averaging mismatch (backreaction toy): absolute difference between ``evolve then average'' and ``average then evolve'' for $y'=y^2$ versus time and heterogeneity scale $s$; the $s=0$ control yields $\approx 0$.}
+  \label{fig:gravity-backreaction}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{\figGravityPackagingMismatch}
+  \caption{The same effect in $(\Qf,\Uf,E)$ language: route mismatch measured as TV distance between $E(T_t(\mu_0))$ and $T_t(E(\mu_0))$ versus time and heterogeneity scale $s$, using a canonical completion matching coarse statistics. A small kink near late times reflects a numerical solver branch change in the completion fit rather than a qualitative dynamical transition.}
+  \label{fig:gravity-packaging-mismatch}
+\end{figure}

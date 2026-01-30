@@ -1,0 +1,10 @@
+\begin{abstract}
+Existing physics practice treats quantum, kinetic, fluid, and gravitational models as separate ``theories,'' yet we lack a checkable way to view them as scale-dependent \emph{closures} that can be compared across domains. We instantiate the Six-Birds lens/completion/closure dictionary as a multi-scale layer template, centering three cross-domain certificates: closure coherence (idempotence), audit monotonicity (data processing), and route mismatch (noncommutation). We operationalize this calculus via a reproducible workflow (Python artifacts + Lean-certified lemmas) and demonstrate it on four instantiations: quantum dephasing, discrete BGK-like kinetic closure, filtered Burgers (LES toy), and nonlinear averaging (backreaction toy).
+
+Under null conditions (no coarse-graining, zero heterogeneity, or exact projections), idempotence defects and route mismatches are $\approx 0$; under controlled interventions they separate cleanly. Dephasing is exactly idempotent; sampled CPTP channels satisfy quantum relative-entropy DPI with no violations beyond tolerance; unitary evolution produces nonzero mismatch that grows with dephasing strength. In the BGK model, packaging coherence improves as collision strength increases, with explicit failure modes when the equilibrium family or retained moments are misspecified. In LES and averaging toys, mismatch grows with filter width or heterogeneity and yields canonical subgrid/backreaction correction terms.
+
+This reframes ``physics theories'' as comparable closure layers and localizes which effective terms are forced by a chosen scale and audit. We do not derive continuum theories or prove analytic bounds; we report Lean-certified algebraic facts and numerical certificates under stated controls.
+\end{abstract}
+
+\vspace{1ex}
+\noindent\textbf{Keywords:} emergence calculus, closure layers, coarse-graining, audit monotonicity, route mismatch, quantum-to-classical, BGK, LES, backreaction, reproducibility

@@ -1,0 +1,92 @@
+\section{Layers as closures}
+\label{sec:layers-closures}
+
+Physics has many ``theories'': quantum mechanics, classical mechanics, kinetic theory, fluid models, effective field theories, and so on. Our thesis is that (at least for the kinds of questions that appear in modeling and simulation) many such transitions can be treated as \emph{layers} in the Six-Birds sense: each layer is a \emph{closure/packaging} built on top of a finer description by choosing (i) what macro information is retained and (ii) how the missing information is completed.
+
+Concretely, a layer is specified by three ingredients:
+\begin{enumerate}
+  \item a \emph{lens} $\Lens:\Z\to\X$ (what we retain),
+  \item a \emph{completion} $\Uf:\Dist{\X}\to\Dist{\Z}$ (how we complete what we discard),
+  \item and a \emph{micro evolution} $T_\tau:\Dist{\Z}\to\Dist{\Z}$ over a chosen timescale $\tau$ (how we evolve before re-packaging).
+\end{enumerate}
+These induce the closure $E_f := \Uf\circ \Qf$ and the timescale packaging operator
+\[
+  \Etauf(\mu) := \Uf\!\bigl(\Qf(T_\tau(\mu))\bigr) = (E_f\circ T_\tau)(\mu).
+\]
+The same dictionary is used in every instantiation below; what changes from domain to domain is the choice of lens, completion, and audit.
+
+\subsection{What makes a ``layer'' coherent?}
+The closure $E_f$ is coherent to the extent that it \emph{stabilizes} micro states under repeated application. When the section axiom holds (Section~\ref{sec:dictionary}), we obtain exact idempotence: $E_f(E_f(\mu)) = E_f(\mu)$. This is the simplest sense in which a macro description can be treated as a self-contained ``theory layer'': once a state has been packaged into the macro-consistent family, packaging again does nothing.
+
+In many physics closures the section axiom is only approximate (e.g.\ moment closures, maximum-entropy completions, local equilibria). In those cases we track an \emph{idempotence defect} numerically, which measures how far a chosen completion is from defining an exactly closed layer on the timescale(s) of interest.
+
+\subsection{Audits: invariants of coarse-graining}
+A second cross-domain invariant is an \emph{audit}---a distinguishability measure $A(\cdot,\cdot)$ that should not increase under a lens:
+\[
+  A(\Qf\mu,\Qf\mu') \le A(\mu,\mu').
+\]
+This is the ``data processing'' idea in Six-Birds language: coarse descriptions should not create new distinguishability.
+
+In the classical finite setting, the canonical audit is the KL divergence, and audit monotonicity is the usual data processing inequality:
+\[
+  \DKL{\Qf\mu}{\Qf\mu'} \le \DKL{\mu}{\mu'}.
+\]
+In the quantum setting, the analogous audit is quantum relative entropy and the same inequality holds for completely positive trace-preserving maps.
+
+We also use total variation distance as a coarse, scale-agnostic audit. For finite distributions we take
+\[
+  \mathrm{TV}(\mu,\mu') := \tfrac{1}{2}\sum_{z\in\Z}\bigl|\mu(z)-\mu'(z)\bigr|,
+\]
+matching the normalization used in our Lean development and in the discrete simulations.
+Lean formalizes the deterministic pushforward contraction
+\[
+  \mathrm{TV}(\Qf\mu,\Qf\mu') \le \mathrm{TV}(\mu,\mu')
+\]
+for deterministic $\Lens$, recorded as \texttt{EmergenceCalc.TV\_Q\_f\_le} in Appendix~\ref{app:lean}. (The physics experiments then use analogous audits numerically in settings where the lens is not purely deterministic.)
+
+\subsection{Route mismatch: when layers fail to commute with dynamics}
+The third cross-domain diagnostic is whether the closure $E_f$ \emph{commutes} with evolution on the timescale $\tau$. There are two natural routes from a micro state $\mu$:
+\[
+  \text{(A)}\quad E_f(T_\tau(\mu)) = \Etauf(\mu),
+  \qquad
+  \text{(B)}\quad T_\tau(E_f(\mu)).
+\]
+Their discrepancy is the \emph{route mismatch}. When $E_f\circ T_\tau = T_\tau\circ E_f$, the macro family selected by $E_f$ is dynamically invariant on that timescale; when the routes do not commute, the mismatch is structured evidence that some effective term has been omitted by the macro description.
+
+A useful sufficient condition for commutation is a \emph{factorization through the macro layer}: if there exists a macro evolution $S_\tau:\Dist{\X}\to\Dist{\X}$ such that
+\[
+  \Qf(T_\tau(\mu)) = S_\tau(\Qf(\mu))
+  \quad\text{and}\quad
+  T_\tau(\Uf\nu)=\Uf(S_\tau\nu),
+\]
+then $E_f$ commutes with $T_\tau$. In Lean, this is packaged as\\
+{\small\texttt{EmergenceCalc.commutes\_of\_factorsThrough}} (Appendix~\ref{app:lean}), instantiated for a canonical uniform-on-fibers completion.
+We include this lemma as an explicit sufficient condition for commutation; none of our physics instantiations assumes exact factorization, and we treat noncommutation/mismatch as the generic regime.
+
+In physics, exact commutation is rare; the more common situation is that the mismatch has a recognizable form. In LES it is the subgrid correction term; in gravity it manifests as backreaction-like effects; in quantum it reflects incompatibility between coherent evolution and a decohering closure.
+
+\subsection{Physics instantiations of the same operator template}
+The remainder of the paper instantiates the same $(\Lens,\Uf,T_\tau)$ template in four familiar physics settings.
+\begin{itemize}
+  \item \textbf{Quantum $\to$ classical} (Section~\ref{sec:quantum-classical}). The closure is dephasing in a basis (exactly idempotent), the audit is quantum relative entropy (DPI), and the route mismatch between unitary evolution and dephasing is visible in Figures~\ref{fig:quantum-closure-idempotence}--\ref{fig:quantum-route-mismatch} and Table~\ref{tab:quantum-dpi-summary}.
+
+  \item \textbf{Kinetic $\to$ fluids} (Section~\ref{sec:kinetic-fluids}). The lens extracts moments and the completion reconstructs a local equilibrium family. Idempotence improves as collision frequency increases (Figure~\ref{fig:bgk-idempotence-defect}); explicit failure regimes are documented in Figure~\ref{fig:bgk-failure-modes} and Table~\ref{tab:bgk-failure-modes}.
+
+  \item \textbf{Filtering/LES} (Section~\ref{sec:les}). The lens is spatial filtering; route mismatch (Figure~\ref{fig:les-route-mismatch}) yields a canonical ``rewrite term'' (Figure~\ref{fig:les-subgrid-term}) that plays the role of a closure correction.
+
+  \item \textbf{Gravity/backreaction toy} (Section~\ref{sec:gravity}). The lens is an averaging/coarse-statistics map; mismatch between average-then-evolve and evolve-then-average grows with heterogeneity (Figure~\ref{fig:gravity-backreaction}). The same phenomenon can be written in explicit $(\Lens,\Uf)$ language (Figure~\ref{fig:gravity-packaging-mismatch}).
+\end{itemize}
+
+\subsection{What we certify versus what we simulate}
+Across the paper we separate three levels of support.
+\begin{enumerate}
+  \item \textbf{Lean-certified algebraic facts} about closures and lenses (Appendix~\ref{app:lean}), including an explicit section completion {\small\texttt{EmergenceCalc.U\_uniform}} with {\small\texttt{EmergenceCalc.section\_uniform}} and resulting idempotence, factorization$\Rightarrow$\allowbreak commutation, total-variation contraction, and a definability counting lemma\linebreak ({\small\texttt{Emergence\allowbreak Calc.\allowbreak card\_\allowbreak DefPred\_fst}} and variants).
+
+  \item \textbf{Numerical certificates} (figures/tables) that the same invariants hold in the physics instantiations (e.g.\ DPI experiments, idempotence-defect trends).
+
+  \item \textbf{Failure modes} (especially for closures that are only approximate), used to avoid overclaiming when assumptions fail (e.g.\ wrong equilibrium family or missing slow modes).
+\end{enumerate}
+The reproducibility appendix (Section~\ref{sec:repro}) ties every figure/table to a deterministic script and artifact list.
+
+\medskip
+Overall, the point is not that one layer is ``truer'' than another, but that many physics theories can be compared on the same mathematical axis: each is a closure built from a lens and a completion at a chosen scale, and the same audits and route diagnostics explain both when the layer behaves like an autonomous theory and when extra effective terms must be carried along.

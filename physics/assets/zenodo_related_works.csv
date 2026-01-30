@@ -1,0 +1,26 @@
+relation,identifier,scheme,resource_type,bibkey,title
+Cites,10.5281/zenodo.18365949,DOI,other,SixBirdsFramework,Six Birds: Foundations of Emergence Calculus
+Cites,10.1103/PhysRev.94.511,DOI,publication-article,bhatnagar1954bgk,A Model for Collision Processes in Gases. I. Small Amplitude Processes in Charged and Neutral One-Component Systems
+Cites,10.1023/A:1001800617177,DOI,publication-article,buchert2000,On Average Properties of Inhomogeneous Fluids in General Relativity: Dust Cosmologies
+Cites,10.1023/A:1012061725841,DOI,publication-article,buchert2001,On Average Properties of Inhomogeneous Fluids in General Relativity: Perfect Fluid Cosmologies
+Cites,10.1007/978-1-4612-1039-9,DOI,publication-book,cercignani1988,The Boltzmann Equation and Its Applications
+Cites,10.1088/0034-4885/74/11/112901,DOI,publication-article,clarkson2011,"Does the Growth of Structure Affect Our Dynamical Models of the Universe? The Averaging, Backreaction and Fitting Problems in Cosmology"
+Cites,10.1146/annurev.ns.43.120193.001233,DOI,publication-article,georgi1993,Effective Field Theory
+Cites,10.1017/S0022112092001733,DOI,publication-article,germano1992,Turbulence: The Filtering Approach
+Cites,10.1103/PhysRevD.83.084020,DOI,publication-article,greenwald2011,A New Framework for Analyzing the Effects of Small Scale Inhomogeneities in Cosmology
+Cites,10.1016/S0065-2687(08)60464-1,DOI,publication-bookchapter,leonard1974,Energy Cascade in Large-Eddy Simulations of Turbulent Fluid Flows
+Cites,10.1007/BF02179552,DOI,publication-article,levermore1996,Moment Closure Hierarchies for Kinetic Theories
+Cites,10.1007/BF01609396,DOI,publication-article,lindblad1975,Completely Positive Maps and Entropy Inequalities
+Cites,10.1145/3372885.3373824,DOI,publication-conferencepaper,mathlib2020lean,
+Cites,10.1143/PTP.33.423,DOI,publication-article,mori1965,"Transport, Collective Motion, and Brownian Motion"
+Cites,10.1007/978-3-030-79876-5_37,DOI,publication-conferencepaper,moura2021lean4,
+Cites,10.1017/CBO9780511976667,DOI,publication-book,nielsenchuang2010,Quantum Computation and Quantum Information
+Cites,10.1007/BF01212345,DOI,publication-article,petz1986,Sufficient Subalgebras and the Relative Entropy of States of a Quantum System
+Cites,10.1017/CBO9780511840531,DOI,publication-book,pope2000,Turbulent Flows
+Cites,10.1007/b137536,DOI,publication-book,sagaut2006,Large Eddy Simulation for Incompressible Flows: An Introduction
+Cites,10.1007/978-3-540-35775-9,DOI,publication-book,schlosshauer2007,Decoherence and the Quantum-to-Classical Transition
+Cites,10.1175/1520-0493(1963)091<0099:GCEWTP>2.3.CO;2,DOI,publication-article,smagorinsky1963,General Circulation Experiments with the Primitive Equations. I. The Basic Experiment
+Cites,10.1017/9781316809976,DOI,publication-book,wilde2017,Quantum Information Theory
+Cites,10.1016/0370-1573(74)90023-4,DOI,publication-article,wilsonkogut1974,
+Cites,10.1103/RevModPhys.75.715,DOI,publication-article,zurek2003,"Decoherence, Einselection, and the Quantum Origins of the Classical"
+Cites,10.1103/PhysRev.124.983,DOI,publication-article,zwanzig1961,Memory Effects in Irreversible Thermodynamics

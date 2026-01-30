@@ -1,0 +1,59 @@
+\subsection*{Commands}
+\begin{verbatim}
+bash scripts/check_physics.sh
+bash scripts/build_physics_paper.sh
+\end{verbatim}
+
+\subsection*{Required physics artifacts}
+\begin{verbatim}
+physics/artifacts/manifest.json
+physics/artifacts/smoke_core.csv
+physics/artifacts/smoke_core.png
+physics/artifacts/quantum_checks_summary.json
+physics/artifacts/quantum_dpi_summary.csv
+physics/artifacts/quantum_dpi_hist.png
+physics/artifacts/quantum_closure_idempotence.png
+physics/artifacts/quantum_route_mismatch.csv
+physics/artifacts/quantum_route_mismatch.png
+physics/artifacts/bgk_idempotence_defect.csv
+physics/artifacts/bgk_summary.csv
+physics/artifacts/bgk_idempotence_defect.png
+physics/artifacts/bgk_failure_modes.csv
+physics/artifacts/bgk_failure_modes.png
+physics/artifacts/les_route_mismatch.csv
+physics/artifacts/les_route_mismatch.png
+physics/artifacts/les_subgrid_term.csv
+physics/artifacts/les_subgrid_term.png
+physics/artifacts/gravity_backreaction.csv
+physics/artifacts/gravity_backreaction.png
+physics/artifacts/gravity_packaging_mismatch.csv
+physics/artifacts/gravity_packaging_mismatch.png
+\end{verbatim}
+
+\subsection*{Generation map}
+\small
+\begin{itemize}[leftmargin=*,itemsep=0pt]
+  \item {\footnotesize \texttt{manifest.json} $\leftarrow$ \texttt{run\_all.py}}
+  \item {\footnotesize \texttt{smoke\_core.csv} $\leftarrow$ \texttt{\_smoke\_test.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{smoke\_core.png} $\leftarrow$ \texttt{\_smoke\_test.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{quantum\_checks\_summary.json} $\leftarrow$ \texttt{quantum/\_checks.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{quantum\_dpi\_summary.csv} $\leftarrow$ \texttt{quantum/dpi.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{quantum\_dpi\_hist.png} $\leftarrow$ \texttt{quantum/dpi.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{quantum\_closure\_idempotence.png} $\leftarrow$ \texttt{quantum/closure.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{quantum\_route\_mismatch.csv} $\leftarrow$ \texttt{quantum/closure.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{quantum\_route\_mismatch.png} $\leftarrow$ \texttt{quantum/closure.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{bgk\_idempotence\_defect.csv} $\leftarrow$ \texttt{fluids/bgk\_discrete.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{bgk\_summary.csv} $\leftarrow$ \texttt{fluids/bgk\_discrete.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{bgk\_idempotence\_defect.png} $\leftarrow$ \texttt{fluids/bgk\_discrete.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{bgk\_failure\_modes.csv} $\leftarrow$ \texttt{fluids/bgk\_failure\_modes.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{bgk\_failure\_modes.png} $\leftarrow$ \texttt{fluids/bgk\_failure\_modes.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{les\_route\_mismatch.csv} $\leftarrow$ \texttt{les/burgers\_1d.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{les\_route\_mismatch.png} $\leftarrow$ \texttt{les/burgers\_1d.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{les\_subgrid\_term.csv} $\leftarrow$ \texttt{les/subgrid\_term.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{les\_subgrid\_term.png} $\leftarrow$ \texttt{les/subgrid\_term.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{gravity\_backreaction.csv} $\leftarrow$ \texttt{gravity/backreaction\_toy.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{gravity\_backreaction.png} $\leftarrow$ \texttt{gravity/backreaction\_toy.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{gravity\_packaging\_mismatch.csv} $\leftarrow$ \texttt{gravity/packaging\_view.py (via run\_all.py)}}
+  \item {\footnotesize \texttt{gravity\_packaging\_mismatch.png} $\leftarrow$ \texttt{gravity/packaging\_view.py (via run\_all.py)}}
+\end{itemize}
+\normalsize

@@ -1,0 +1,88 @@
+\section[Kinetic $\to$ fluids: moment lens and local-equilibrium completion]{Kinetic $\to$ fluids: moment lens and\\ local-equilibrium completion}
+\label{sec:kinetic-fluids}
+
+Kinetic descriptions sit between particle mechanics and continuum fluid models: the micro state records a distribution over positions and velocities, while the fluid layer retains only a small set of low-order moments (density, momentum/velocity, energy). In Six-Birds terms, this is a prototypical closure: a \emph{moment lens} retains selected statistics, and a \emph{local-equilibrium completion} fills in the discarded degrees of freedom.
+
+We use a discrete BGK-like model \citep{bhatnagar1954bgk,cercignani1988,levermore1996}. The goal is not physical fidelity but to expose the closure invariants that recur across physics layers: coherence of packaging (idempotence trend), explicit failure regimes, and the dependence of closure quality on a timescale parameter (collision frequency).
+
+\subsection{Micro state and BGK-style dynamics}
+The micro configuration is a nonnegative mass function $f(x,v)$ on a small periodic lattice of positions $x$ and a small set of discrete velocities $v\in V$. One time step consists of:
+\begin{enumerate}
+  \item \textbf{Transport:} move $f(x,v)$ along characteristics (a permutation/shift on the lattice).
+  \item \textbf{Collision/relaxation:} relax toward a local equilibrium:
+  \[
+    f \leftarrow (1-\omega)\,f + \omega\,f_{\mathrm{eq}}(m(f)),
+  \]
+  where $\omega\in[0,1]$ controls the collision strength and $m(f)$ denotes the chosen moment fields.
+\end{enumerate}
+\paragraph{Discrete velocity and equilibrium family (toy specification).}
+In our implementation, the velocity set is the three-point lattice $V=\{-1,0,1\}$ and we normalize the total mass so that $\sum_{x\in\text{grid}}\sum_{v\in V} f(x,v)=1$; this lets us treat $f$ as a finite micro-distribution in the Six-Birds sense.
+The completion family $f_{\mathrm{eq}}$ is a discrete maximum-entropy (``Maxwellian-like'') equilibrium on $V$ subject to matching the retained local mass and momentum, i.e.\ $f_{\mathrm{eq}}(x,\cdot)$ is the unique exponential-family distribution on $\{-1,0,1\}$ whose moments agree with $\rho(x)$ and $u(x)$.
+The relaxation weight $\omega\in[0,1]$ should be read as a nondimensional collision strength: $\omega=0$ is free transport, while $\omega=1$ projects to local equilibrium at every step (qualitatively: shorter relaxation time / smaller Knudsen number in standard BGK settings).
+When $\omega$ is large, within-cell mixing is strong and the micro state rapidly approaches the equilibrium family; when $\omega$ is small, transport dominates and the equilibrium ansatz becomes a poor representation.
+
+\subsection{Lens: moments as the retained macro description}
+The lens $\Lens$ retains a small set of velocity moments at each lattice site. Concretely, one may think of the retained macro fields as
+\[
+  \rho(x) = \sum_{v\in V} f(x,v),
+  \qquad
+  u(x) = \frac{1}{\rho(x)}\sum_{v\in V} v\,f(x,v),
+\]
+(in our baseline experiments we retain only $\rho$ and $u$; an energy-like slow mode is introduced only in Failure Mode FM3). These moments define a macro state space $\X$ consisting of coarse fields rather than full velocity-resolved distributions.
+
+This is exactly the ``fluid layer'' idea: many micro configurations share the same moments, so the lens forgets most micro information while keeping the macroscopic quantities of interest.
+
+\subsection{Completion: local equilibrium as a canonical lift}
+Given macro moments, the completion $\Uf$ reconstructs a micro state by choosing a canonical equilibrium family $f_{\mathrm{eq}}$ consistent with those moments. In continuous kinetic theory this is the Maxwellian (or maximum-entropy) completion; here we use a discrete analog.
+
+In Six-Birds language, the closure
+\[
+  E_f := \Uf\circ\Qf
+\]
+is the operation that replaces an arbitrary micro state by the locally equilibrated micro state with matching retained moments.
+
+\subsection{Packaging coherence: idempotence defect vs collision frequency}
+To probe whether the resulting ``fluid layer'' is coherent on a timescale, we use the timescale packaging operator
+\[
+  \Etauf(\mu) = \Uf(\Qf(T_\tau(\mu))),
+\]
+where $T_\tau$ is $\tau$ BGK time steps and $\mu$ denotes the micro distribution (here represented by the discrete array $f$).
+
+If the relaxation is effective on the timescale $\tau$, then applying packaging twice should not change much: after one package, the system is already close to the macro-consistent equilibrium family. We quantify this by an \emph{idempotence defect}
+\[
+  \delta(\mu) := \TVnorm{\Etauf(\Etauf(\mu)) - \Etauf(\mu)}.
+\]
+Figure~\ref{fig:bgk-idempotence-defect} shows that $\delta$ decreases as $\omega$ increases, especially for larger $\tau$: stronger collisions drive faster convergence toward the equilibrium manifold, making the closure behave more like an autonomous layer. Table~\ref{tab:bgk-endpoints} summarizes the endpoint comparison $\omega=0$ versus $\omega=1$ across several $\tau$ values. (Intermediate $\omega$ values need not be strictly monotone because transport and relaxation compete, but the aggregate trend is clear.)
+
+\subsection{Failure modes: when moment closure is not the right layer}
+Moment closures are useful precisely because they compress state; they also fail in systematic ways when assumptions are violated. We record three concrete failure regimes in the same discrete setting.
+
+\begin{itemize}
+  \item \textbf{Low-collision, strong-gradient regime.} When $\omega$ is small and spatial gradients are large, the local equilibrium completion is not dynamically appropriate. The idempotence defect stays large, reflecting that packaging does not stabilize the dynamics on the chosen timescale.
+
+  \item \textbf{Wrong equilibrium family.} If the completion uses a mis-specified equilibrium family (a biased/incorrect $f_{\mathrm{eq}}$), the layer can look superficially ``stable'' while producing systematic macro errors. We quantify this as a weighted mean absolute velocity error ($u_{\mathrm{err}}$) (Table~\ref{tab:bgk-failure-modes}). This is a reminder that closure coherence must be checked together with audits of the retained quantities.
+
+  \item \textbf{Lens missing a slow mode (e.g.\ energy).} If a slow variable is omitted from the macro description, packaging can erase information that matters on the timescale of interest. We track an energy-proxy error ($e_{\mathrm{err}}$); Table~\ref{tab:bgk-failure-modes} reports both the error when the mode is omitted and the near-zero error after extending the lens.
+\end{itemize}
+
+Figure~\ref{fig:bgk-failure-modes} visualizes these regimes, and Table~\ref{tab:bgk-failure-modes} provides compact numerical summaries.
+
+\subsection{Takeaway}
+This instantiation captures a standard physics moral in Six-Birds form: the ``fluid layer'' is a closure built from a moment lens and an equilibrium completion. Its coherence improves when the underlying dynamics mixes rapidly within the discarded degrees of freedom (here controlled by $\omega$), and it fails in recognizable regimes when the equilibrium ansatz or the retained moments are mismatched to the dynamics.
+
+\input{autogen/table_bgk_endpoints}
+\input{autogen/table_bgk_failure_modes}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{\figBgkIdempotenceDefect}
+  \caption{Moment-closure coherence in a discrete BGK toy: mean idempotence defect $\delta=\tfrac12\|E_\tau(E_\tau(f)) - E_\tau(f)\|_1$ on flattened arrays versus collision strength $\omega$ and timescale $\tau$ (averaged over random initial conditions).}
+  \label{fig:bgk-idempotence-defect}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{\figBgkFailureModes}
+  \caption{Explicit moment-closure failure regimes in the same BGK toy (weak collisions/strong gradients, wrong equilibrium family, missing slow mode). Metrics reported match Table~\ref{tab:bgk-failure-modes}.}
+  \label{fig:bgk-failure-modes}
+\end{figure}

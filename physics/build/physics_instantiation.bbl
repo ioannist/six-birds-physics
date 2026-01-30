@@ -1,0 +1,177 @@
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bhatnagar et~al.(1954)Bhatnagar, Gross, and Krook]{bhatnagar1954bgk}
+P.~L. Bhatnagar, E.~P. Gross, and M.~Krook.
+\newblock A model for collision processes in gases. i. small amplitude
+  processes in charged and neutral one-component systems.
+\newblock \emph{Physical Review}, 94\penalty0 (3):\penalty0 511--525, 1954.
+\newblock \doi{10.1103/PhysRev.94.511}.
+
+\bibitem[Buchert(2000)]{buchert2000}
+Thomas Buchert.
+\newblock On average properties of inhomogeneous fluids in general relativity:
+  Dust cosmologies.
+\newblock \emph{General Relativity and Gravitation}, 32\penalty0 (1):\penalty0
+  105--125, 2000.
+\newblock \doi{10.1023/A:1001800617177}.
+
+\bibitem[Buchert(2001)]{buchert2001}
+Thomas Buchert.
+\newblock On average properties of inhomogeneous fluids in general relativity:
+  Perfect fluid cosmologies.
+\newblock \emph{General Relativity and Gravitation}, 33\penalty0 (8):\penalty0
+  1381--1405, 2001.
+\newblock \doi{10.1023/A:1012061725841}.
+
+\bibitem[Cercignani(1988)]{cercignani1988}
+Carlo Cercignani.
+\newblock \emph{The Boltzmann Equation and Its Applications}.
+\newblock Springer, 1988.
+\newblock \doi{10.1007/978-1-4612-1039-9}.
+
+\bibitem[Clarkson et~al.(2011)Clarkson, Ellis, Larena, and Umeh]{clarkson2011}
+Chris Clarkson, George F.~R. Ellis, Julien Larena, and Obinna Umeh.
+\newblock Does the growth of structure affect our dynamical models of the
+  universe? the averaging, backreaction and fitting problems in cosmology.
+\newblock \emph{Reports on Progress in Physics}, 74\penalty0 (11):\penalty0
+  112901, 2011.
+\newblock \doi{10.1088/0034-4885/74/11/112901}.
+
+\bibitem[de~Moura and Ullrich(2021)]{moura2021lean4}
+Leonardo de~Moura and Sebastian Ullrich.
+\newblock The {Lean} 4 theorem prover and programming language.
+\newblock In \emph{Automated Deduction -- CADE 28}, pages 625--635, 2021.
+\newblock \doi{10.1007/978-3-030-79876-5_37}.
+
+\bibitem[Georgi(1993)]{georgi1993}
+Howard Georgi.
+\newblock Effective field theory.
+\newblock \emph{Annual Review of Nuclear and Particle Science}, 43:\penalty0
+  209--252, 1993.
+\newblock \doi{10.1146/annurev.ns.43.120193.001233}.
+
+\bibitem[Germano(1992)]{germano1992}
+Massimo Germano.
+\newblock Turbulence: The filtering approach.
+\newblock \emph{Journal of Fluid Mechanics}, 238:\penalty0 325--336, 1992.
+\newblock \doi{10.1017/S0022112092001733}.
+
+\bibitem[Green and Wald(2011)]{greenwald2011}
+Stephen~R. Green and Robert~M. Wald.
+\newblock A new framework for analyzing the effects of small scale
+  inhomogeneities in cosmology.
+\newblock \emph{Physical Review D}, 83\penalty0 (8):\penalty0 084020, 2011.
+\newblock \doi{10.1103/PhysRevD.83.084020}.
+
+\bibitem[Leonard(1974)]{leonard1974}
+A.~Leonard.
+\newblock Energy cascade in large-eddy simulations of turbulent fluid flows.
+\newblock In \emph{Advances in Geophysics}, volume 18A, pages 237--248.
+  Elsevier, 1974.
+\newblock \doi{10.1016/S0065-2687(08)60464-1}.
+
+\bibitem[Levermore(1996)]{levermore1996}
+C.~David Levermore.
+\newblock Moment closure hierarchies for kinetic theories.
+\newblock \emph{Journal of Statistical Physics}, 83\penalty0 (5-6):\penalty0
+  1021--1065, 1996.
+\newblock \doi{10.1007/BF02179552}.
+
+\bibitem[Lindblad(1975)]{lindblad1975}
+G{\"o}ran Lindblad.
+\newblock Completely positive maps and entropy inequalities.
+\newblock \emph{Communications in Mathematical Physics}, 40\penalty0
+  (2):\penalty0 147--151, 1975.
+\newblock \doi{10.1007/BF01609396}.
+
+\bibitem[mathlib Community(2020)]{mathlib2020lean}
+The mathlib Community.
+\newblock The {Lean} mathematical library.
+\newblock In \emph{Proceedings of the 9th {ACM} {SIGPLAN} International
+  Conference on Certified Programs and Proofs}, pages 367--381, 2020.
+\newblock \doi{10.1145/3372885.3373824}.
+
+\bibitem[Mori(1965)]{mori1965}
+Hazime Mori.
+\newblock Transport, collective motion, and brownian motion.
+\newblock \emph{Progress of Theoretical Physics}, 33\penalty0 (3):\penalty0
+  423--455, 1965.
+\newblock \doi{10.1143/PTP.33.423}.
+
+\bibitem[Nielsen and Chuang(2010)]{nielsenchuang2010}
+Michael~A. Nielsen and Isaac~L. Chuang.
+\newblock \emph{Quantum Computation and Quantum Information}.
+\newblock Cambridge University Press, 10th anniversary edition edition, 2010.
+\newblock \doi{10.1017/CBO9780511976667}.
+
+\bibitem[Petz(1986)]{petz1986}
+D{\\'e}nes Petz.
+\newblock Sufficient subalgebras and the relative entropy of states of a
+  quantum system.
+\newblock \emph{Communications in Mathematical Physics}, 105\penalty0
+  (1):\penalty0 123--131, 1986.
+\newblock \doi{10.1007/BF01212345}.
+
+\bibitem[Pope(2000)]{pope2000}
+Stephen~B. Pope.
+\newblock \emph{Turbulent Flows}.
+\newblock Cambridge University Press, 2000.
+\newblock \doi{10.1017/CBO9780511840531}.
+
+\bibitem[Sagaut(2006)]{sagaut2006}
+Pierre Sagaut.
+\newblock \emph{Large Eddy Simulation for Incompressible Flows: An
+  Introduction}.
+\newblock Springer, 2006.
+\newblock \doi{10.1007/b137536}.
+
+\bibitem[Schlosshauer(2007)]{schlosshauer2007}
+Maximilian Schlosshauer.
+\newblock \emph{Decoherence and the Quantum-to-Classical Transition}.
+\newblock Springer, 2007.
+\newblock \doi{10.1007/978-3-540-35775-9}.
+
+\bibitem[Smagorinsky(1963)]{smagorinsky1963}
+Joseph Smagorinsky.
+\newblock General circulation experiments with the primitive equations. i. the
+  basic experiment.
+\newblock \emph{Monthly Weather Review}, 91\penalty0 (3):\penalty0 99--164,
+  1963.
+\newblock \doi{10.1175/1520-0493(1963)091<0099:GCEWTP>2.3.CO;2}.
+
+\bibitem[Tsiokos(2026)]{SixBirdsFramework}
+Ioannis Tsiokos.
+\newblock Six birds: Foundations of emergence calculus, 2026.
+\newblock URL \url{https://zenodo.org/records/18365949}.
+
+\bibitem[Wilde(2017)]{wilde2017}
+Mark~M. Wilde.
+\newblock \emph{Quantum Information Theory}.
+\newblock Cambridge University Press, 2 edition, 2017.
+\newblock \doi{10.1017/9781316809976}.
+
+\bibitem[Wilson and Kogut(1974)]{wilsonkogut1974}
+Kenneth~G. Wilson and John Kogut.
+\newblock The renormalization group and the {$\epsilon$} expansion.
+\newblock \emph{Physics Reports}, 12\penalty0 (2):\penalty0 75--199, 1974.
+\newblock \doi{10.1016/0370-1573(74)90023-4}.
+
+\bibitem[Zurek(2003)]{zurek2003}
+Wojciech~H. Zurek.
+\newblock Decoherence, einselection, and the quantum origins of the classical.
+\newblock \emph{Reviews of Modern Physics}, 75\penalty0 (3):\penalty0 715--775,
+  2003.
+\newblock \doi{10.1103/RevModPhys.75.715}.
+
+\bibitem[Zwanzig(1961)]{zwanzig1961}
+Robert Zwanzig.
+\newblock Memory effects in irreversible thermodynamics.
+\newblock \emph{Physical Review}, 124\penalty0 (4):\penalty0 983--992, 1961.
+\newblock \doi{10.1103/PhysRev.124.983}.
+
+\end{thebibliography}

@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: physics_instantiation.aux
+The style file: plainnat.bst
+Database file #1: physics_instantiation.bib
+You've used 25 entries,
+            2773 wiz_defined-function locations,
+            769 strings with 8692 characters,
+and the built_in function-call counts, 10350 in all, are:
+= -- 995
+> -- 343
+< -- 27
++ -- 127
+- -- 102
+* -- 747
+:= -- 1581
+add.period$ -- 100
+call.type$ -- 25
+change.case$ -- 105
+chr.to.int$ -- 25
+cite$ -- 50
+duplicate$ -- 534
+empty$ -- 984
+format.name$ -- 135
+if$ -- 2204
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 30
+newline$ -- 157
+num.names$ -- 100
+pop$ -- 210
+preamble$ -- 1
+purify$ -- 84
+quote$ -- 0
+skip$ -- 376
+stack$ -- 0
+substring$ -- 513
+swap$ -- 55
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 245
+warning$ -- 0
+while$ -- 112
+width$ -- 0
+write$ -- 377

@@ -1,0 +1,65 @@
+\section{Discussion, limitations, and what breaks}
+\label{sec:discussion}
+
+This paper argues that several familiar ``theory transitions'' in physics can be fruitfully organized using the Six-Birds dictionary: a \emph{layer} is specified by a lens $\Lens$ (what is retained), a completion $\Uf$ (how missing information is filled in), and a timescale evolution operator $T_\tau$, inducing a packaging operator $\Etauf = \Uf\circ\Qf\circ T_\tau$. The goal is not to replace domain knowledge, but to provide a shared language for comparing closures across domains.
+
+This section makes explicit what we are and are not claiming, and records the main failure regimes that keep the story honest.
+
+\subsection{Scope: instantiations, not derivations}
+Our claims are \emph{structural}. We exhibit concrete choices of $(\Lens,\Uf,T_\tau)$ for which the same invariants recur:
+\begin{itemize}
+  \item packaging coherence (exact or approximate idempotence),
+  \item audit monotonicity (a data-processing principle),
+  \item route mismatch structure (noncommutation with dynamics).
+\end{itemize}
+We do \emph{not} claim to derive fluid models from particle mechanics, classicality from quantum theory, or backreaction corrections in GR. Instead, we show that many such transitions can be cast as choices of lens and completion at a scale, and that the same diagnostics explain both when a layer behaves like an autonomous ``theory'' and when additional effective terms are forced.
+
+\subsection{Modeling choices: the lens and completion are part of the theory}
+A recurrent theme is that ``the theory'' at a layer is not only the macro variables (the lens) but also the completion family that defines what counts as a valid packaged state. Different completions with the same lens can behave very differently:
+\begin{itemize}
+  \item In kinetic/fluid closure, a wrong equilibrium family can look superficially stable while producing systematic macro error.
+  \item In gravity-style averaging, choosing to retain only a mean (instead of mean+variance) changes whether heterogeneity effects are visible at the macro level.
+\end{itemize}
+This is why we treat $\Uf$ as first-class data rather than an afterthought: it is the commitment that turns a coarse description into an operational layer.
+
+\subsection{Timescales and mixing: when a layer becomes coherent}
+In the examples where idempotence is approximate (not exact projections), packaging quality depends on a timescale separation: information discarded by the lens must relax quickly within the fibers (or within the completion family) on the timescale $\tau$ relevant to the macro model. When within-fiber mixing is weak (or slow modes are omitted), the packaged family is not dynamically stable and idempotence defects persist.
+
+This aligns with the intuition behind many successful closures: they work when the discarded degrees of freedom equilibrate fast relative to the retained ones.
+
+\subsection{What breaks: explicit failure regimes}
+The repo includes explicit failure modes to avoid overclaiming.
+\begin{itemize}
+  \item \textbf{Moment closure failures (Section~\ref{sec:kinetic-fluids}).} When collisions are weak and gradients are strong, a local-equilibrium completion is not appropriate on the chosen timescale; packaging does not stabilize. When the equilibrium family is mis-specified, macro errors persist even if the closure appears coherent. When the lens omits a slow variable (e.g.\ an energy-like mode), packaging can erase information that matters on the timescale of interest.
+
+  \item \textbf{LES mismatch is structural (Section~\ref{sec:les}).} For nonlinear evolution, filtering and dynamics generically do not commute. This is not a bug; it is precisely what produces a deterministic correction term (the rewrite/subgrid term). A closure that ignores this term is predictably biased.
+
+  \item \textbf{Averaging mismatch under nonlinearity (Section~\ref{sec:gravity}).} When heterogeneity is present, ``average then evolve'' and ``evolve then average'' disagree even in simple nonlinear toys. Any macro layer that discards heterogeneity must either accept this mismatch or expand the macro description to carry additional statistics.
+\end{itemize}
+
+\subsection{Audits: what is certified versus what is only checked numerically}
+We separate logical status carefully.
+\begin{itemize}
+  \item \textbf{Lean-certified algebraic facts.} Appendix~\ref{app:lean} records Lean formalizations of several lens/closure facts used as conceptual anchors: an explicit section completion for a partition lens (uniform-on-fibers), closure idempotence from a section axiom, factorization$\Rightarrow$commutation, total-variation contraction under deterministic pushforward, and a definability counting lemma for fiber-constant predicates.
+
+  \item \textbf{Numerical certificates.} The physics instantiations use numerical experiments as evidence for audit monotonicity and trend claims in settings where formalization would require substantial additional infrastructure (e.g.\ quantum relative entropy DPI under sampled channels, or PDE-based commutators). These are best read as regression tests for the intended invariants, not as proofs.
+\end{itemize}
+
+\subsection{Domain-specific limitations}
+Each instantiation is intentionally minimal; this is a feature (clarity) and a limitation (fidelity).
+\begin{itemize}
+  \item \textbf{Quantum.} Dephasing is a clean closure, but it is not ``the'' quantum-to-classical limit; basis choice matters, and semiclassical limits involve additional structure. Our point is the closure template (exact idempotence + audit monotonicity + route mismatch with coherent dynamics), not a foundational claim.
+
+  \item \textbf{Kinetic/fluid.} The BGK-like discrete model is a toy: it demonstrates moment-lens closure behavior and failure regimes, but it is not a derivation of Navier--Stokes.
+
+  \item \textbf{LES.} Burgers is a toy nonlinear PDE; the same commutator logic applies in more realistic settings, but quantitative scaling and tensor structure are substantially more complex in 3D turbulence.
+
+  \item \textbf{Gravity.} Our example is not GR; it isolates the nonlinearity/\linebreak averaging mechanism. Connecting this to geometric averaging schemes is future work.
+\end{itemize}
+
+\subsection{Near-term extensions}
+We list concrete next steps that would strengthen the follow-up paper without changing its thesis.
+\begin{itemize}
+  \item Extend Lean coverage from deterministic lenses to simple stochastic lenses (Markov kernels) and connect to audit monotonicity in a more native formal setting.
+  \item Add one or two ``composed layer'' experiments where closures are stacked (e.g.\ kinetic$\to$fluid then filter), testing how route mismatch compounds.
+\end{itemize}

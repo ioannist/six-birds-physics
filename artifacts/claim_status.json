@@ -1,0 +1,803 @@
+{
+  "cor:closure-saturates": {
+    "context": "Order-closure and closure ladders > Closure ladders and saturation",
+    "risk_level": "Med",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "cor:ect-bal-icap": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "High",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "cor:ect-hl1": {
+    "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "cor:null-regime": {
+    "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "cor:strict-language-extension": {
+    "context": "Generic extension and the finite forcing lemma > Finite forcing: generic extensions are non-definable",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Definability"
+    ]
+  },
+  "corollary@L916": {
+    "context": "Arrow-of-time as path reversal asymmetry",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Stub",
+      "Sim:DPI"
+    ]
+  },
+  "corollary@L973": {
+    "context": "Arrow-of-time as path reversal asymmetry",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Stub",
+      "Sim:DPI"
+    ]
+  },
+  "def:D-IC-01": {
+    "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+    "risk_level": "Low",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "def:D-IC-02": {
+    "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "def:closed-points": {
+    "context": "Order-closure and closure ladders > Order-theoretic closure and fixed points",
+    "risk_level": "Low",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "def:closure-ladder": {
+    "context": "Order-closure and closure ladders > Closure ladders and saturation",
+    "risk_level": "Low",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "def:closure-operator": {
+    "context": "Order-closure and closure ladders > Order-theoretic closure and fixed points",
+    "risk_level": "Low",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "def:cycle-integral": {
+    "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+    "risk_level": "Low",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "def:ect-atom": {
+    "context": "Appendix E: Toolkit theory---defects > Summary: slots and divergence consequence",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:ect-atom-ss": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:ect-bal": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "High",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:ect-cap": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:ect-gate": {
+    "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:ect-p4-idx": {
+    "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:ect-p5min": {
+    "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:ect-sectorization": {
+    "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:edge-one-form": {
+    "context": "AUT + REV + ACC regime and graph 1-forms > Bidirected support and the log-ratio 1-form",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "def:exact-one-form": {
+    "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+    "risk_level": "Low",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "def:meta-bnd": {
+    "context": "Why the primitives are unavoidable",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "def:meta-lens": {
+    "context": "Why the primitives are unavoidable",
+    "risk_level": "Low",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "def:meta-proc": {
+    "context": "Why the primitives are unavoidable",
+    "risk_level": "Low",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "def:meta-ref": {
+    "context": "Why the primitives are unavoidable",
+    "risk_level": "Low",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "def:strictly-stronger": {
+    "context": "Order-closure and closure ladders > Closure ladders and saturation",
+    "risk_level": "Low",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "def:tk-bridge-ports": {
+    "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:tk-icap": {
+    "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:tk-passive-storage": {
+    "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "def:tk-theory-package": {
+    "context": "Conventions and notation > A unified theory package viewpoint",
+    "risk_level": "High",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "definition@L1174": {
+    "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "definition@L1180": {
+    "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "definition@L1186": {
+    "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "definition@L1194": {
+    "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "definition@L1200": {
+    "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "definition@L1206": {
+    "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "definition@L469": {
+    "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+    "risk_level": "Low",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "definition@L474": {
+    "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+    "risk_level": "Low",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "definition@L589": {
+    "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "definition@L856": {
+    "context": "Arrow-of-time as path reversal asymmetry",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Stub",
+      "Sim:DPI"
+    ]
+  },
+  "definition@L878": {
+    "context": "Arrow-of-time as path reversal asymmetry",
+    "risk_level": "High",
+    "statuses": [
+      "Lean:Stub",
+      "Sim:DPI"
+    ]
+  },
+  "definition@L935": {
+    "context": "Arrow-of-time as path reversal asymmetry",
+    "risk_level": "Low",
+    "statuses": [
+      "Lean:Stub",
+      "Sim:DPI"
+    ]
+  },
+  "definition@L998": {
+    "context": "Generic extension and the finite forcing lemma > Theories as partitions and definability",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Definability"
+    ]
+  },
+  "lem:closed-antitone": {
+    "context": "Order-closure and closure ladders > Order-theoretic closure and fixed points",
+    "risk_level": "Low",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:closure-iterate-stabilizes": {
+    "context": "Order-closure and closure ladders > Closure ladders and saturation",
+    "risk_level": "Low",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:count-definable": {
+    "context": "Generic extension and the finite forcing lemma > Counting lemma: definable predicates are rare",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Definability"
+    ]
+  },
+  "lem:ect-bal-kmass": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "High",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:ect-coer-feas": {
+    "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:ect-fmem": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:ect-mech": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:ect-mode-ub": {
+    "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:ect-qsize": {
+    "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:ect-shrink": {
+    "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+    "risk_level": "High",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:exact-zero-cycles": {
+    "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "lem:latency-lb": {
+    "context": "Appendix D: Zeno cascades and depth > Integrated throughput (ICAP) and feasibility \\texorpdfstring{$\\Rightarrow$",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "lem:tk-causal-compose": {
+    "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:tk-parallel-add": {
+    "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:tk-route-capacity": {
+    "context": "Appendix E: Toolkit theory---defects > Route dependence, capacity, and a one-step control inequality",
+    "risk_level": "Med",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "lem:work-quantum": {
+    "context": "Appendix D: Zeno cascades and depth > Storage-based activity and the WORK quantum (Option B)",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "lemma@L1060": {
+    "context": "Generic extension and the finite forcing lemma > Finite forcing: generic extensions are non-definable",
+    "risk_level": "High",
+    "statuses": [
+      "Sim:Definability"
+    ]
+  },
+  "lemma@L482": {
+    "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+    "risk_level": "Low",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:ect-div": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:ect-nonimplication": {
+    "context": "Appendix E: Toolkit theory---defects > Summary: slots and divergence consequence",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:ect-p5-fmem": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:ect-route": {
+    "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+    "risk_level": "Med",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:ect-shrink-examples": {
+    "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:ect-slots": {
+    "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:hl-p2-core": {
+    "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:lean-closure": {
+    "context": "Order-closure and closure ladders > Closure ladders and saturation",
+    "risk_level": "Low",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:tk-bridge-to-primitives": {
+    "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:tk-extreme-points": {
+    "context": "Appendix E: Toolkit theory---defects > Defects as quantitative relaxations of exact laws",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:tk-holonomy-no-teleology": {
+    "context": "Appendix E: Toolkit theory---defects > Route dependence, capacity, and a one-step control inequality",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:tk-interoperability": {
+    "context": "Introduction",
+    "risk_level": "High",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "rem:tk-serial-note": {
+    "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "rem:tk-theory-instantiations": {
+    "context": "Conventions and notation > A unified theory package viewpoint",
+    "risk_level": "Low",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "remark@L1010": {
+    "context": "Generic extension and the finite forcing lemma > Theories as partitions and definability",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Definability"
+    ]
+  },
+  "remark@L1093": {
+    "context": "Generic extension and the finite forcing lemma > Finite forcing: generic extensions are non-definable",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Definability"
+    ]
+  },
+  "remark@L1218": {
+    "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "remark@L1329": {
+    "context": "Primitives P1--P6 as closure-changing operations > Two load-bearing propositions",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "remark@L1754": {
+    "context": "Appendix D: Zeno cascades and depth > Integrated throughput (ICAP) and feasibility \\texorpdfstring{$\\Rightarrow$",
+    "risk_level": "Low",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "remark@L2017": {
+    "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+    "risk_level": "Low",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "remark@L233": {
+    "context": "Conventions and notation > Paths, time reversal, and relative entropy",
+    "risk_level": "High",
+    "statuses": [
+      "Sim:DPI"
+    ]
+  },
+  "remark@L245": {
+    "context": "Conventions and notation > Coarse-graining lenses",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Core"
+    ]
+  },
+  "remark@L255": {
+    "context": "Conventions and notation > A unified theory package viewpoint",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "remark@L283": {
+    "context": "Conventions and notation > A unified theory package viewpoint",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "remark@L416": {
+    "context": "Order-closure and closure ladders > Closure ladders and saturation",
+    "risk_level": "Low",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "remark@L439": {
+    "context": "Order-closure and closure ladders > Closure ladders and saturation",
+    "risk_level": "Med",
+    "statuses": [
+      "CE:FailureModes",
+      "Sim:Idempotence"
+    ]
+  },
+  "remark@L498": {
+    "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "remark@L510": {
+    "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+    "risk_level": "Low",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "remark@L559": {
+    "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "remark@L698": {
+    "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+    "risk_level": "High",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "remark@L745": {
+    "context": "AUT + REV + ACC regime and graph 1-forms > Bidirected support and the log-ratio 1-form",
+    "risk_level": "Low",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "remark@L844": {
+    "context": "AUT + REV + ACC regime and graph 1-forms > Accounting as coordinates on cycle space",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "remark@L873": {
+    "context": "Arrow-of-time as path reversal asymmetry",
+    "risk_level": "High",
+    "statuses": [
+      "Lean:Stub",
+      "Sim:DPI"
+    ]
+  },
+  "remark@L980": {
+    "context": "Arrow-of-time as path reversal asymmetry",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Stub",
+      "Sim:DPI"
+    ]
+  },
+  "theorem@L1294": {
+    "context": "Primitives P1--P6 as closure-changing operations > Two load-bearing propositions",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "theorem@L1313": {
+    "context": "Primitives P1--P6 as closure-changing operations > Two load-bearing propositions",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "thm:T-IC-01": {
+    "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+    "risk_level": "High",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "thm:T-IC-02": {
+    "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+    "risk_level": "High",
+    "statuses": [
+      "Lean:Core",
+      "Lean:Stub",
+      "Sim:Idempotence"
+    ]
+  },
+  "thm:cycle-criterion-exact": {
+    "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "thm:dpi_path": {
+    "context": "Arrow-of-time as path reversal asymmetry",
+    "risk_level": "Low",
+    "statuses": [
+      "Lean:Stub",
+      "Sim:DPI"
+    ]
+  },
+  "thm:ect-summary": {
+    "context": "Appendix E: Toolkit theory---defects > Summary: slots and divergence consequence",
+    "risk_level": "High",
+    "statuses": [
+      "Sim:Idempotence"
+    ]
+  },
+  "thm:finite-forcing": {
+    "context": "Generic extension and the finite forcing lemma > Finite forcing: generic extensions are non-definable",
+    "risk_level": "Med",
+    "statuses": [
+      "Sim:Definability"
+    ]
+  },
+  "thm:meta-prim": {
+    "context": "Why the primitives are unavoidable",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "thm:no-zeno": {
+    "context": "Appendix D: Zeno cascades and depth > No-Zeno criterion via divergence",
+    "risk_level": "Med",
+    "statuses": [
+      "Unknown"
+    ]
+  },
+  "thm:protocol_trap": {
+    "context": "Arrow-of-time as path reversal asymmetry",
+    "risk_level": "Med",
+    "statuses": [
+      "Lean:Stub",
+      "Sim:DPI"
+    ]
+  }
+}

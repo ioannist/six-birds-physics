@@ -1,0 +1,78 @@
+{
+  "allowed_root_files": [
+    "README.md",
+    "paper.tex",
+    ".package-repo-snapshot.json"
+  ],
+  "allowed_roots": {
+    "artifacts": {
+      "extensions": [
+        ".json",
+        ".csv",
+        ".txt",
+        ".md",
+        ".png",
+        ".pdf"
+      ]
+    },
+    "lean": {
+      "extensions": [
+        ".lean",
+        ".toml"
+      ],
+      "filenames": [
+        "lean-toolchain",
+        "lakefile.lean",
+        "lakefile.toml"
+      ]
+    },
+    "notes": {
+      "extensions": [
+        ".md",
+        ".txt"
+      ]
+    },
+    "physics": {
+      "extensions": [
+        ".py",
+        ".md",
+        ".txt",
+        ".json",
+        ".csv",
+        ".png",
+        ".bib",
+        ".tex",
+        ".sh"
+      ]
+    },
+    "python": {
+      "extensions": [
+        ".py",
+        ".txt",
+        ".ini",
+        ".toml",
+        ".md"
+      ]
+    },
+    "scripts": {
+      "extensions": [
+        ".sh",
+        ".py",
+        ".txt"
+      ]
+    }
+  },
+  "exclude_dirs": [
+    ".git",
+    ".lake",
+    ".venv",
+    "venv",
+    "__pycache__",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".ipynb_checkpoints",
+    "tmp",
+    "generated"
+  ]
+}

@@ -1,0 +1,24 @@
+\section{Introduction}
+\label{sec:introduction}
+
+To ``become a stone'' in physics is to pass from a detailed microdescription to a stable macro layer that can be treated as its own theory: the high-frequency degrees of freedom are discarded, the retained macro information becomes actionable, and the resulting description behaves coherently on the scale of interest. This is precisely the closure move.
+
+Many physics ``theory transitions'' are implemented as scale choices: retain some macro information, discard the rest, and add a closure rule to make the reduced description usable.
+
+What is often missing is a \emph{checkable, cross-domain way} to compare such closures: when does a proposed macro layer behave coherently, when does it preserve a chosen audit (data-processing), and when does it necessarily induce a structured mismatch term?
+
+This paper is a follow-up instantiation of the Six-Birds dictionary in several physics settings \citep{SixBirdsFramework}. We treat a layer as a choice of lens $\Qf$ (what is retained), completion $\Uf$ (how discarded information is completed), and a timescale evolution operator $T_\tau$, inducing a packaging operator $\Etauf=\Uf\circ\Qf\circ T_\tau$. The same three diagnostics recur across domains: closure coherence (idempotence), audit monotonicity, and route mismatch (noncommutation).
+
+\paragraph{Contributions (three-layer stack).}
+We (A) introduce a reusable closure-layer template aligned with the Six-Birds certificate loop, (B) operationalize it as a reproducible workflow that exports figures/tables from deterministic scripts and records Lean-certified backbone lemmas, and (C) demonstrate controlled null-vs-intervention separations in four instantiations (quantum dephasing, BGK-like moment closure, filtering/LES on Burgers, and nonlinear averaging/backreaction toy).
+
+\paragraph{Code availability.}
+The physics-instantiation repository is available at:
+\begin{itemize}[noitemsep,topsep=2pt]
+\item \url{https://github.com/ioannist/six-birds-physics}
+\end{itemize}
+
+\paragraph{How to read the paper.}
+Section~\ref{sec:dictionary} fixes the dictionary and notation; Section~\ref{sec:layers-closures} states the thesis and the cross-domain invariants.
+Sections~\ref{sec:quantum-classical}--\ref{sec:gravity} present instantiations.
+Appendix~\ref{app:lean} lists Lean-certified lemmas used as algebraic anchors, and Appendix~\ref{app:sims} records the discrepancy metrics and default run settings for the numerical certificates.

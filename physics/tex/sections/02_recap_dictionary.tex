@@ -1,0 +1,99 @@
+\section{Recap and dictionary alignment}
+\label{sec:dictionary}
+
+This paper instantiates the Six-Birds framework \citep{SixBirdsFramework} in several physics settings. We reuse the Six-Birds dictionary and notation: \emph{lens}, \emph{completion}, \emph{closure/packaging}, \emph{audit}, and \emph{route mismatch} mean exactly what they mean in the original paper, specialized to the physics examples in Sections~\ref{sec:quantum-classical}--\ref{sec:gravity}. This section pins down the symbols we use throughout.
+
+\subsection{Micro/macro state spaces and lenses}
+We write $\Z$ for a micro state space and $\X$ for a macro state space. In our finite-state instantiations, a state of knowledge is a distribution $\mu \in \Dist{\Z}$ (resp.\ $\nu \in \Dist{\X}$).
+
+\paragraph{A type-generic viewpoint (why we reuse $\Dist{\cdot}$).}
+The Six-Birds dictionary is not limited to classical probability distributions: a ``state space'' can be any convex set of states, and a lens/completion are typically affine maps between such sets. For consistency, we reuse the notation
+$\Dist{\Z}\xrightarrow{\Qf}\Dist{\X}\xrightarrow{\Uf}\Dist{\Z}$
+even when the objects are not literally finite PMFs (e.g.\ density matrices in Section~\ref{sec:quantum-classical} or fields in Section~\ref{sec:les}). When a statement is genuinely specific to finite PMFs (notably the Lean development in Appendix~\ref{app:lean}), we say so explicitly.
+
+\paragraph{Instantiations at a glance.}
+\begin{itemize}
+  \item \textbf{Classical finite (Lean anchor):} $\Dist{\Z}$ and $\Dist{\X}$ are PMFs on finite types, $\Lens:\Z\to\X$ is a deterministic partition lens, $\Uf$ is the uniform-on-fibers completion, and $E=\Uf\circ\Qf$ is exactly idempotent.
+
+  \item \textbf{Quantum $\to$ classical (Section~\ref{sec:quantum-classical}):} micro states are density matrices; the lens retains diagonal information in a chosen basis; the completion embeds a classical distribution as a diagonal density matrix; the resulting closure is the dephasing channel.
+
+  \item \textbf{Kinetic $\to$ fluids (Section~\ref{sec:kinetic-fluids}):} micro states are discrete kinetic densities $f(x,v)$; the lens extracts low-order moments; the completion reconstructs a local-equilibrium family; discrepancies are measured with a normalized $L^1$-style distance on the discrete arrays.
+
+  \item \textbf{LES/filtering (Section~\ref{sec:les}):} micro states are fine-scale fields; the lens is a spatial filter; there is no canonical completion $U$; the closure problem is expressed as a structured rewrite/subgrid term induced by noncommutation.
+
+  \item \textbf{Gravity toy (Section~\ref{sec:gravity}):} micro states are heterogeneous ensembles; the lens is averaging/coarse statistics; the completion is a canonical distribution matching those statistics; route mismatch under nonlinear evolution is the backreaction-style diagnostic.
+\end{itemize}
+
+\subsection{Six birds as roles (P1--P6)}
+The Six-Birds primitives are \emph{roles} played by concrete objects in an instantiation, not topics. In the physics setting, a compact reading is:
+\begin{enumerate}
+  \item \textbf{P1 (operator rewrite).} When a macro evolution is not closed, route mismatch diagnoses the needed rewrite/correction term (e.g.\ LES subgrid term).
+  \item \textbf{P2 (constraints).} The macro-consistent family selected by a completion $\Uf$ defines which states count as admissible at the layer.
+  \item \textbf{P3 (protocol/holonomy).} Competing routes (evolve--then--close vs close--then--evolve) define mismatch/holonomy diagnostics.
+  \item \textbf{P4 (staging).} A scale parameter (time $\tau$, filter width $\sigma$, or refinement level) specifies when packaging is evaluated.
+  \item \textbf{P5 (packaging).} The closure $E=\Uf\circ\Qf$ and its timescale version $\Etauf$ define the packaged layer.
+  \item \textbf{P6 (accounting/audit).} An audit (KL/relative entropy, TV, or RMS mismatch) records feasibility and monotonicity under coarse-graining.
+\end{enumerate}
+This list is the same Six-Birds dictionary \citep{SixBirdsFramework}, specialized to the objects used in this paper.
+
+A deterministic lens is a map $\Lens:\Z\to\X$. The fiber over $x\in\X$ is
+\[
+  \Fiber{x} := \{ z\in\Z : \Lens(z)=x \}.
+\]
+The induced coarse-graining/pushforward operator is
+\[
+  \Qf : \Dist{\Z}\to\Dist{\X},\qquad
+  (\Qf \mu)(x) := \sum_{z\in \Fiber{x}} \mu(z).
+\]
+(Several of our physics examples use a more general stochastic lens, but the deterministic case already captures the ``layering by closure'' phenomenon.)
+
+\subsection{Completion and closure}
+A completion (also: lift, reconstruction) chooses a micro distribution consistent with a given macro distribution:
+\[
+  \Uf : \Dist{\X}\to\Dist{\Z}.
+\]
+The idealized \emph{section axiom} is
+\[
+  \Qf(\Uf \nu)=\nu \quad \text{for all }\nu\in\Dist{\X}.
+\]
+When the section axiom holds exactly, the induced closure/packaging operator
+\[
+  E_f := \Uf\circ \Qf : \Dist{\Z}\to\Dist{\Z}
+\]
+is idempotent:
+\[
+  E_f(E_f(\mu)) = E_f(\mu)\qquad\text{for all }\mu\in\Dist{\Z}.
+\]
+In the physics instantiations, $\Uf$ is chosen to be a canonical ``least-commit\-ment'' completion (e.g.\ uniform-on-fibers, basis dephasing, local equilibrium/\linebreak Maxwellian, or Gaussian moment completion). The section axiom is exact in some cases and only approximate in others; when it is approximate we track the corresponding idempotence defect numerically.
+
+\subsection{Dynamics and the timescale packaging operator}
+Let $T_\tau:\Dist{\Z}\to\Dist{\Z}$ denote micro evolution over a timescale $\tau$ (e.g.\ a Markov step, a quantum channel, a time-stepper for a PDE). The timescale packaging operator used throughout the paper is
+\[
+  \Etauf(\mu) := \Uf\!\bigl(\Qf(T_\tau(\mu))\bigr) = (E_f\circ T_\tau)(\mu).
+\]
+Intuitively, $\Etauf$ says: evolve microscopically for time $\tau$, then re-express the result using the chosen macro description and completion.
+
+\subsection{Audits and audit monotonicity}
+An \emph{audit} is a distinguishability measure $A(\cdot,\cdot)$ between distributions that we expect to be non-increasing under coarse-graining:
+\[
+  A(\Qf\mu,\Qf\mu') \le A(\mu,\mu').
+\]
+In the finite classical setting we will write the KL divergence as
+\[
+  \DKL{\mu}{\mu'} := \sum_{z\in\Z} \mu(z)\,\log\!\frac{\mu(z)}{\mu'(z)}.
+\]
+In the quantum setting (Section~\ref{sec:quantum-classical}) the analogous audit is quantum relative entropy. Appendix~\ref{app:lean} records Lean formalizations of some basic audit/coarse-graining facts (e.g.\ total variation contraction under deterministic pushforward).
+
+\subsection{Route mismatch and commutation}
+A central diagnostic in the Six-Birds picture is whether ``evolve then close'' agrees with ``close then evolve''. For a fixed $\tau$, the two routes from $\mu\in\Dist{\Z}$ are
+\[
+  \text{(A)}\quad E_f(T_\tau(\mu))=\Etauf(\mu),
+  \qquad
+  \text{(B)}\quad T_\tau(E_f(\mu)).
+\]
+Their difference is the \emph{route mismatch}; exact equality is a commutation condition $E_f\circ T_\tau = T_\tau\circ E_f$.
+
+In the physics instantiations, mismatch is typically nonzero and structured: in LES it produces the subgrid correction term, in gravity it appears as a backreaction-type effect, and in quantum it reflects incompatibility between coherent evolution and a decohering closure.
+
+\subsection{Reminder: the three-certificate loop}
+The Six-Birds organizing picture is an iterative ``three-certificate'' loop: propose $(\Lens,\Uf)$, then check (i) closure coherence (section/idempotence), (ii) audit monotonicity (data processing), and (iii) route behavior (mismatch/commutation structure) at the scale(s) of interest. The remainder of this paper instantiates this same loop for several standard physics layers.

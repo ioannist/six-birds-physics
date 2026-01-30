@@ -1,0 +1,16 @@
+{
+  "clamp_count": 0,
+  "dims": [
+    2,
+    3,
+    4
+  ],
+  "max_abs_self_entropy": 0.0,
+  "max_trace_err": 1.5543122344752192e-15,
+  "nan_count": 0,
+  "seed": 10,
+  "tol": 1e-10,
+  "trials": 50,
+  "worst_completeness_error": 3.6341326542779975e-15,
+  "worst_min_eig": 0.01679363442235063
+}

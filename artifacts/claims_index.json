@@ -1,0 +1,1353 @@
+{
+  "items": [
+    {
+      "kind": "section",
+      "line": 53,
+      "title": "Introduction"
+    },
+    {
+      "context": "Introduction",
+      "end_line": 103,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:tk-interoperability",
+      "snippet": "[Interoperability of certificates (toolkit safety)]\\label{rem:tk-interoperability} This manuscript uses three logically ",
+      "start_line": 71
+    },
+    {
+      "kind": "subsection",
+      "line": 107,
+      "title": "The organizing picture: a three-certificate loop"
+    },
+    {
+      "kind": "section",
+      "line": 150,
+      "title": "Related work"
+    },
+    {
+      "kind": "section",
+      "line": 207,
+      "title": "Conventions and notation"
+    },
+    {
+      "kind": "subsection",
+      "line": 208,
+      "title": "Finite state spaces, distributions, and kernels"
+    },
+    {
+      "kind": "subsection",
+      "line": 215,
+      "title": "Paths, time reversal, and relative entropy"
+    },
+    {
+      "context": "Conventions and notation > Paths, time reversal, and relative entropy",
+      "end_line": 237,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Stationarity is not needed for $\\Sigma_T$ or data processing] The definition in Section~\\ref{sec:aot} makes sense for a",
+      "start_line": 233
+    },
+    {
+      "kind": "subsection",
+      "line": 239,
+      "title": "Coarse-graining lenses"
+    },
+    {
+      "context": "Conventions and notation > Coarse-graining lenses",
+      "end_line": 251,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "WLOG, we replace $X$ by the image $f(Z)$ so that $f$ is surjective and every fiber $B_x=f^{-1}(x)$ is nonempty. This doe",
+      "start_line": 245
+    },
+    {
+      "kind": "subsection",
+      "line": 253,
+      "title": "A unified theory package viewpoint"
+    },
+    {
+      "context": "Conventions and notation > A unified theory package viewpoint",
+      "end_line": 259,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Emergence and open-endedness (terminology)] Throughout, \\emph{emergence} means the appearance of stable fixed points of",
+      "start_line": 255
+    },
+    {
+      "context": "Conventions and notation > A unified theory package viewpoint",
+      "end_line": 281,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:tk-theory-package",
+      "snippet": "[Finite theory package]\\label{def:tk-theory-package} Assume \\textbf{A\\_FIN}. A \\emph{finite theory package} is a tuple \\",
+      "start_line": 262
+    },
+    {
+      "context": "Conventions and notation > A unified theory package viewpoint",
+      "end_line": 286,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "We use the symbol $\\Sigma$ in two unrelated roles: $\\Sigma_f$ denotes the definability $\\sigma$-algebra induced by a len",
+      "start_line": 283
+    },
+    {
+      "context": "Conventions and notation > A unified theory package viewpoint",
+      "end_line": 295,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:tk-theory-instantiations",
+      "snippet": "[Instantiations in this manuscript]\\label{rem:tk-theory-instantiations} The components of $\\mathcal T$ appear throughout",
+      "start_line": 288
+    },
+    {
+      "kind": "subsection",
+      "line": 297,
+      "title": "A minimal instantiation recipe"
+    },
+    {
+      "kind": "subsection",
+      "line": 318,
+      "title": "Support graphs and discrete 1-forms"
+    },
+    {
+      "kind": "subsection",
+      "line": 333,
+      "title": "Assumption bundles"
+    },
+    {
+      "kind": "section",
+      "line": 349,
+      "title": "Order-closure and closure ladders"
+    },
+    {
+      "kind": "subsection",
+      "line": 351,
+      "title": "Order-theoretic closure and fixed points"
+    },
+    {
+      "context": "Order-closure and closure ladders > Order-theoretic closure and fixed points",
+      "end_line": 365,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:closure-operator",
+      "snippet": "[Closure operator]\\label{def:closure-operator} Let $(L,\\le)$ be a poset. A map $c:L\\to L$ is a \\emph{closure operator} i",
+      "start_line": 358
+    },
+    {
+      "context": "Order-closure and closure ladders > Order-theoretic closure and fixed points",
+      "end_line": 376,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:closed-points",
+      "snippet": "[Closed points / objects]\\label{def:closed-points} Given a closure operator $c:L\\to L$, its \\emph{closed points} (or \\em",
+      "start_line": 370
+    },
+    {
+      "context": "Order-closure and closure ladders > Order-theoretic closure and fixed points",
+      "end_line": 385,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:closed-antitone",
+      "snippet": "[Closed points are antitone in closure strength]\\label{lem:closed-antitone} If $c \\le d$ are closure operators on $L$, t",
+      "start_line": 382
+    },
+    {
+      "kind": "subsection",
+      "line": 392,
+      "title": "Closure ladders and saturation"
+    },
+    {
+      "context": "Order-closure and closure ladders > Closure ladders and saturation",
+      "end_line": 403,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:closure-iterate-stabilizes",
+      "snippet": "[One-step stabilization under iteration]\\label{lem:closure-iterate-stabilizes} Let $c$ be a closure operator on $L$. Def",
+      "start_line": 397
+    },
+    {
+      "context": "Order-closure and closure ladders > Closure ladders and saturation",
+      "end_line": 414,
+      "env": "corollary",
+      "kind": "env",
+      "label": "cor:closure-saturates",
+      "snippet": "[Closure saturates]\\label{cor:closure-saturates} Fix a closure operator $c$. For any $x\\in L$, the sequence $x,\\; c(x),\\",
+      "start_line": 410
+    },
+    {
+      "context": "Order-closure and closure ladders > Closure ladders and saturation",
+      "end_line": 420,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "Viewed abstractly, a closure operator acts like a completion rule.\\\\ Iterating a fixed completion rule stabilizes. Thus ",
+      "start_line": 416
+    },
+    {
+      "context": "Order-closure and closure ladders > Closure ladders and saturation",
+      "end_line": 428,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:strictly-stronger",
+      "snippet": "[Strictly stronger closure]\\label{def:strictly-stronger} For closure operators $c,d$ on $L$, write $c \\prec d$ (``$d$ is",
+      "start_line": 425
+    },
+    {
+      "context": "Order-closure and closure ladders > Closure ladders and saturation",
+      "end_line": 437,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:closure-ladder",
+      "snippet": "[Closure ladder]\\label{def:closure-ladder} A \\emph{closure ladder} is a sequence of closure operators $(c_n)_{n\\in\\mathb",
+      "start_line": 430
+    },
+    {
+      "context": "Order-closure and closure ladders > Closure ladders and saturation",
+      "end_line": 446,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "The strictness relation $\\prec$ is irreflexive and transitive on closure operators (by the pointwise order), and Lemma~\\",
+      "start_line": 439
+    },
+    {
+      "context": "Order-closure and closure ladders > Closure ladders and saturation",
+      "end_line": 456,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:lean-closure",
+      "snippet": "[Lean formalization note]\\label{rem:lean-closure} The order-theoretic closure operator used here is formalized in the re",
+      "start_line": 448
+    },
+    {
+      "kind": "section",
+      "line": 459,
+      "title": "Idempotent endomaps and induced closures"
+    },
+    {
+      "kind": "subsection",
+      "line": 460,
+      "title": "Idempotent endomaps"
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+      "end_line": 472,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Idempotent endomap] Let $A$ be a set (or type). An \\emph{idempotent endomap} on $A$ is a function $e : A \\to A$ such th",
+      "start_line": 469
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+      "end_line": 480,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Fixed points] For an endomap $e : A \\to A$ define its fixed-point set \\[ \\mathrm{Fix}(e) := \\{a\\in A : e(a)=a\\}. \\] We ",
+      "start_line": 474
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+      "end_line": 489,
+      "env": "lemma",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Idempotents split] Let $e : A \\to A$ be an idempotent endomap. Let $i:\\mathrm{Fix}(e)\\hookrightarrow A$ denote inclusio",
+      "start_line": 482
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+      "end_line": 508,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Order-closures as a special case] If $L$ is a poset and $c:L\\to L$ is an order-closure (extensive, monotone, idempotent",
+      "start_line": 498
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Idempotent endomaps",
+      "end_line": 521,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Formalization note] The constructions in this subsection are formalized in Lean: \\begin{itemize} \\item \\texttt{formal/C",
+      "start_line": 510
+    },
+    {
+      "kind": "subsection",
+      "line": 523,
+      "title": "Dynamics-induced empirical endomaps"
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+      "end_line": 553,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:D-IC-01",
+      "snippet": "[Coarse map and canonical lift; \\textbf{D-IC-01}] \\label{def:D-IC-01} Let $Q_f:\\Delta(Z)\\to \\Delta(X)$ be the pushforwar",
+      "start_line": 532
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+      "end_line": 565,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Not an order-closure] The map $E_{\\tau,f}$ is an affine endomap of $\\Delta(Z)$ (indeed a Markov kernel on $Z$), and it ",
+      "start_line": 559
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+      "end_line": 587,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:D-IC-02",
+      "snippet": "[TV idempotence defect; \\textbf{D-IC-02}] \\label{def:D-IC-02} Let $\\|\\cdot\\|_{\\mathrm{TV}}$ denote total variation on $\\",
+      "start_line": 567
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+      "end_line": 598,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Prototype stability at scale $\\tau$] For each $x\\in X$ define the (scale-$\\tau$) stability of the prototype $u_x$ by \\[",
+      "start_line": 589
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+      "end_line": 616,
+      "env": "theorem",
+      "kind": "env",
+      "label": "thm:T-IC-02",
+      "snippet": "[Approximate idempotence from retention] \\label{thm:T-IC-02} \\textbf{T-IC-02.}\\par Assume \\textbf{A\\_FIN}+\\textbf{A\\_LEN",
+      "start_line": 600
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+      "end_line": 677,
+      "env": "theorem",
+      "kind": "env",
+      "label": "thm:T-IC-01",
+      "snippet": "[Refinement can help or hurt] \\label{thm:T-IC-01} \\textbf{T-IC-01.}\\par Assume \\textbf{A\\_FIN}+\\textbf{A\\_LENS}. There e",
+      "start_line": 658
+    },
+    {
+      "context": "Idempotent endomaps and induced closures > Dynamics-induced empirical endomaps",
+      "end_line": 706,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Qualified ``theory birth''] The induced endomap $E_{\\tau,f}$ packages a distribution by evolving for $\\tau$ steps and t",
+      "start_line": 698
+    },
+    {
+      "kind": "section",
+      "line": 709,
+      "title": "AUT + REV + ACC regime and graph 1-forms"
+    },
+    {
+      "kind": "subsection",
+      "line": 718,
+      "title": "Bidirected support and the log-ratio 1-form"
+    },
+    {
+      "context": "AUT + REV + ACC regime and graph 1-forms > Bidirected support and the log-ratio 1-form",
+      "end_line": 740,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:edge-one-form",
+      "snippet": "[Edge log-ratio 1-form] \\label{def:edge-one-form} Assume \\textbf{A\\_FIN}+\\textbf{A\\_REV}. The \\emph{antisymmetric edge 1",
+      "start_line": 732
+    },
+    {
+      "context": "AUT + REV + ACC regime and graph 1-forms > Bidirected support and the log-ratio 1-form",
+      "end_line": 749,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Why \\textbf{A\\_REV} matters] If \\textbf{A\\_REV} fails, then ratios such as $P_{ij}/P_{ji}$ may be undefined, and many t",
+      "start_line": 745
+    },
+    {
+      "kind": "subsection",
+      "line": 751,
+      "title": "Cycle integrals, exactness, and the null regime"
+    },
+    {
+      "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+      "end_line": 763,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:cycle-integral",
+      "snippet": "[Cycle integral / affinity along a cycle] \\label{def:cycle-integral} Given an antisymmetric edge 1-form $a$ and an orien",
+      "start_line": 756
+    },
+    {
+      "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+      "end_line": 773,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:exact-one-form",
+      "snippet": "[Exact 1-forms] \\label{def:exact-one-form} An antisymmetric 1-form $a$ on $\\vec E$ is \\emph{exact} if there exists a pot",
+      "start_line": 765
+    },
+    {
+      "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+      "end_line": 780,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:exact-zero-cycles",
+      "snippet": "[Exact forms have zero cycle integrals] \\label{lem:exact-zero-cycles} \\mbox{}\\par Assume \\textbf{A\\_FIN}+\\textbf{A\\_REV}",
+      "start_line": 775
+    },
+    {
+      "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+      "end_line": 800,
+      "env": "theorem",
+      "kind": "env",
+      "label": "thm:cycle-criterion-exact",
+      "snippet": "[Cycle criterion for exactness] \\label{thm:cycle-criterion-exact} Assume \\textbf{A\\_FIN}+\\textbf{A\\_REV} and let $a$ be ",
+      "start_line": 790
+    },
+    {
+      "context": "AUT + REV + ACC regime and graph 1-forms > Cycle integrals, exactness, and the null regime",
+      "end_line": 826,
+      "env": "corollary",
+      "kind": "env",
+      "label": "cor:null-regime",
+      "snippet": "[Null regime as ``no-drive'' / detailed-balance-like] \\label{cor:null-regime} Assume \\textbf{A\\_FIN}+\\textbf{A\\_REV}+\\te",
+      "start_line": 816
+    },
+    {
+      "kind": "subsection",
+      "line": 828,
+      "title": "Accounting as coordinates on cycle space"
+    },
+    {
+      "context": "AUT + REV + ACC regime and graph 1-forms > Accounting as coordinates on cycle space",
+      "end_line": 848,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Implementation note for Appendix C] The repository includes a small graph-theoretic routine that computes cycle affinit",
+      "start_line": 844
+    },
+    {
+      "kind": "section",
+      "line": 851,
+      "title": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap"
+    },
+    {
+      "context": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap",
+      "end_line": 869,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Forward path law and reversal (D-AOT-01)] Fix a horizon $T\\in \\mathbb N$ with $T\\ge 1$ and an initial distribution $\\rh",
+      "start_line": 856
+    },
+    {
+      "context": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap",
+      "end_line": 876,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Stationarity is not required (L-AOT-STAT-01)] The quantity $\\Sigma_T(\\rho)$ is defined for any initial distribution $\\r",
+      "start_line": 873
+    },
+    {
+      "context": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap",
+      "end_line": 882,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Steady-state entropy production (D-AOT-EP-01)] Assume additionally \\textbf{A\\_STAT} and let $\\pi$ be a stationary distr",
+      "start_line": 878
+    },
+    {
+      "kind": "subsection",
+      "line": 884,
+      "title": "Data processing: coarse-graining cannot create asymmetry"
+    },
+    {
+      "context": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap > Data processing: coarse-graining cannot create asymmetry",
+      "end_line": 903,
+      "env": "theorem",
+      "kind": "env",
+      "label": "thm:dpi_path",
+      "snippet": "[Data processing for path reversal asymmetry (T-AOT-01)]\\label{thm:dpi_path} Under \\textbf{A\\_FIN}+\\textbf{A\\_LENS}, for",
+      "start_line": 895
+    },
+    {
+      "context": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap > Data processing: coarse-graining cannot create asymmetry",
+      "end_line": 921,
+      "env": "corollary",
+      "kind": "env",
+      "label": null,
+      "snippet": "[No false positives] Assume \\textbf{A\\_FIN}+\\textbf{A\\_LENS}. If the lifted system has zero asymmetry at horizon $T$, th",
+      "start_line": 916
+    },
+    {
+      "kind": "subsection",
+      "line": 928,
+      "title": "Protocol trap: apparent stroboscopic arrows and the ``clock audit''"
+    },
+    {
+      "context": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap > Protocol trap: apparent stroboscopic arrows and the ``clock audit''",
+      "end_line": 944,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Autonomous $m$-phase protocol] \\textbf{D-PROT-02.}\\par Fix $\\alpha\\in[0,1]$ and define an autonomous Markov chain on th",
+      "start_line": 935
+    },
+    {
+      "context": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap > Protocol trap: apparent stroboscopic arrows and the ``clock audit''",
+      "end_line": 957,
+      "env": "theorem",
+      "kind": "env",
+      "label": "thm:protocol_trap",
+      "snippet": "[Protocol trap / hidden-drive principle (T-AOT-02)]\\label{thm:protocol_trap} Assume \\textbf{A\\_FIN}+\\textbf{A\\_AUT}. Sup",
+      "start_line": 946
+    },
+    {
+      "context": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap > Protocol trap: apparent stroboscopic arrows and the ``clock audit''",
+      "end_line": 978,
+      "env": "corollary",
+      "kind": "env",
+      "label": null,
+      "snippet": "[``P3 needs P6\\_drive'' under autonomy (C-ACC-01)] Under \\textbf{A\\_FIN}+\\textbf{A\\_REV}+\\textbf{A\\_AUT}+\\textbf{A\\_ACC}",
+      "start_line": 973
+    },
+    {
+      "context": "Arrow-of-time as path reversal asymmetry; data processing; protocol trap > Protocol trap: apparent stroboscopic arrows and the ``clock audit''",
+      "end_line": 984,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[What the ``protocol trap'' actually warns about] The theorem above is about \\emph{true} path reversal asymmetry. In pra",
+      "start_line": 980
+    },
+    {
+      "kind": "section",
+      "line": 987,
+      "title": "Generic extension and the finite forcing lemma"
+    },
+    {
+      "kind": "subsection",
+      "line": 989,
+      "title": "Theories as partitions and definability"
+    },
+    {
+      "context": "Generic extension and the finite forcing lemma > Theories as partitions and definability",
+      "end_line": 1005,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Predicates and definability] A (Boolean) \\emph{predicate} is a function $h:Z\\to\\{0,1\\}$. We say that $h$ is \\emph{defin",
+      "start_line": 998
+    },
+    {
+      "context": "Generic extension and the finite forcing lemma > Theories as partitions and definability",
+      "end_line": 1014,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "In a fixed finite $Z$ there is a hard cap on how many strict refinements are possible; open-endedness is modeled by repe",
+      "start_line": 1010
+    },
+    {
+      "kind": "subsection",
+      "line": 1022,
+      "title": "Counting lemma: definable predicates are rare"
+    },
+    {
+      "context": "Generic extension and the finite forcing lemma > Counting lemma: definable predicates are rare",
+      "end_line": 1033,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:count-definable",
+      "snippet": "[Counting definable predicates]\\label{lem:count-definable} Assume \\textbf{A\\_FIN}+\\textbf{A\\_LENS}. The number of predic",
+      "start_line": 1026
+    },
+    {
+      "kind": "subsection",
+      "line": 1040,
+      "title": "Finite forcing: generic extensions are non-definable"
+    },
+    {
+      "context": "Generic extension and the finite forcing lemma > Finite forcing: generic extensions are non-definable",
+      "end_line": 1053,
+      "env": "theorem",
+      "kind": "env",
+      "label": "thm:finite-forcing",
+      "snippet": "[Finite forcing lemma / physical forcing lemma]\\label{thm:finite-forcing} Assume \\textbf{A\\_FIN}+\\textbf{A\\_LENS}. Let $",
+      "start_line": 1046
+    },
+    {
+      "context": "Generic extension and the finite forcing lemma > Finite forcing: generic extensions are non-definable",
+      "end_line": 1074,
+      "env": "lemma",
+      "kind": "env",
+      "label": null,
+      "snippet": "Assume \\textbf{A\\_FIN}+\\textbf{A\\_LENS} and let $f:Z\\to X$ have blocks $\\Pi_f=\\{B_x\\}_{x\\in X}$. For each block $B_x$, \\",
+      "start_line": 1060
+    },
+    {
+      "context": "Generic extension and the finite forcing lemma > Finite forcing: generic extensions are non-definable",
+      "end_line": 1086,
+      "env": "corollary",
+      "kind": "env",
+      "label": "cor:strict-language-extension",
+      "snippet": "[Generic extension is strict]\\label{cor:strict-language-extension} \\mbox{}\\par Assume \\textbf{A\\_FIN}+\\textbf{A\\_LENS}. ",
+      "start_line": 1081
+    },
+    {
+      "context": "Generic extension and the finite forcing lemma > Finite forcing: generic extensions are non-definable",
+      "end_line": 1097,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Why this is the anti-saturation move] Closure (or packaging) at a fixed theory saturates by idempotence: repeated closu",
+      "start_line": 1093
+    },
+    {
+      "kind": "section",
+      "line": 1100,
+      "title": "Why the primitives are unavoidable"
+    },
+    {
+      "context": "Why the primitives are unavoidable",
+      "end_line": 1106,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:meta-proc",
+      "snippet": "[Process soup (D-META-PROC-01)]\\label{def:meta-proc} A \\emph{process soup} is a set $\\mathcal P$ equipped with a partial",
+      "start_line": 1103
+    },
+    {
+      "context": "Why the primitives are unavoidable",
+      "end_line": 1112,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:meta-lens",
+      "snippet": "[Interface lens (D-META-LENS-01)]\\label{def:meta-lens} An \\emph{interface lens} is a map $f:\\mathcal P\\to X$ to a set of",
+      "start_line": 1108
+    },
+    {
+      "context": "Why the primitives are unavoidable",
+      "end_line": 1120,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:meta-ref",
+      "snippet": "[Refinement family (D-META-REF-01)]\\label{def:meta-ref} A refinement family is a chain of equivalence relations $(\\sim_j",
+      "start_line": 1114
+    },
+    {
+      "context": "Why the primitives are unavoidable",
+      "end_line": 1126,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:meta-bnd",
+      "snippet": "[Bounded interface (D-META-BND-01)]\\label{def:meta-bnd} There exists $C_0\\ge 1$ such that the quotient index satisfies $",
+      "start_line": 1122
+    },
+    {
+      "context": "Why the primitives are unavoidable",
+      "end_line": 1148,
+      "env": "theorem",
+      "kind": "env",
+      "label": "thm:meta-prim",
+      "snippet": "[Self-generated primitives]\\label{thm:meta-prim} Assume D-META-PROC-01, D-META-LENS-01, D-META-REF-01, and D-META-BND-01",
+      "start_line": 1129
+    },
+    {
+      "kind": "section",
+      "line": 1159,
+      "title": "Primitives P1--P6 as closure-changing operations"
+    },
+    {
+      "kind": "subsection",
+      "line": 1172,
+      "title": "Definitions of P1--P6"
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+      "end_line": 1178,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[P1: operator rewrite] P1 is a rewrite of the substrate operator: replace a Markov kernel $P$ by a new kernel $P'$ (or a",
+      "start_line": 1174
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+      "end_line": 1184,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[P2: gating / constraints] P2 restricts the support graph by deleting edges (setting selected $P_{ij}=0$) and renormaliz",
+      "start_line": 1180
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+      "end_line": 1192,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[P3: autonomous protocol holonomy] P3 is modeled in the autonomous lifted form on $Z:=X\\times\\Phi$. The phase $\\phi\\in\\P",
+      "start_line": 1186
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+      "end_line": 1198,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[P4: sectors / invariants] P4 is a conserved sector label: the support decomposes into disconnected components (block st",
+      "start_line": 1194
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+      "end_line": 1204,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[P5: packaging] P5 is an idempotent endomap $e$ whose fixed points $\\mathrm{Fix}(e)$ are the packaged objects of a given",
+      "start_line": 1200
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+      "end_line": 1216,
+      "env": "definition",
+      "kind": "env",
+      "label": null,
+      "snippet": "[P6: accounting / audit] P6 is an accounting/audit structure: a certificate or functional that is monotone under coarse ",
+      "start_line": 1206
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Definitions of P1--P6",
+      "end_line": 1222,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "We write \\emph{P6\\_drive} for the ACC specialization: a non-exact log-ratio 1-form (equivalently, a nonzero cycle integr",
+      "start_line": 1218
+    },
+    {
+      "kind": "subsection",
+      "line": 1224,
+      "title": "How the primitives compose to generate theory growth"
+    },
+    {
+      "kind": "subsection",
+      "line": 1263,
+      "title": "Downward influence across theories"
+    },
+    {
+      "kind": "subsection",
+      "line": 1291,
+      "title": "Two load-bearing propositions"
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Two load-bearing propositions",
+      "end_line": 1306,
+      "env": "theorem",
+      "kind": "env",
+      "label": null,
+      "snippet": "[P2 gating shrinks cycle space] \\textbf{T-P2-01.}\\par Assume \\textbf{A\\_FIN}+\\textbf{A\\_REV}.\\par Let $G=(V,E)$ be an un",
+      "start_line": 1294
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Two load-bearing propositions",
+      "end_line": 1317,
+      "env": "theorem",
+      "kind": "env",
+      "label": null,
+      "snippet": "[P1 can change cycle rank and spectral gap (T-P1-01)] Assume \\textbf{A\\_FIN}+\\textbf{A\\_REV}. P1 rewrites can increase o",
+      "start_line": 1313
+    },
+    {
+      "context": "Primitives P1--P6 as closure-changing operations > Two load-bearing propositions",
+      "end_line": 1332,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[Evidence pointers] Appendix~C records finite graph and kernel witnesses for the P1 and P2 behaviors described above, in",
+      "start_line": 1329
+    },
+    {
+      "kind": "section",
+      "line": 1335,
+      "title": "Examples"
+    },
+    {
+      "kind": "subsection",
+      "line": 1342,
+      "title": "A biased three-cycle: a non-exact graph 1-form"
+    },
+    {
+      "kind": "subsection",
+      "line": 1362,
+      "title": "Protocol trap: external schedule vs autonomous lifted model"
+    },
+    {
+      "kind": "subsection",
+      "line": 1404,
+      "title": "Finite forcing count: definability is exponentially rare"
+    },
+    {
+      "kind": "section",
+      "line": 1418,
+      "title": "Discussion and scope boundary"
+    },
+    {
+      "kind": "subsection",
+      "line": 1419,
+      "title": "What the theory does and does not claim"
+    },
+    {
+      "kind": "subsection",
+      "line": 1442,
+      "title": "Outlook: forthcoming instantiations"
+    },
+    {
+      "kind": "section",
+      "line": 1459,
+      "title": "Appendix A: Reproducibility checklist"
+    },
+    {
+      "kind": "subsection",
+      "line": 1466,
+      "title": "A.1 Repository integrity checks (from repo root)"
+    },
+    {
+      "kind": "subsection",
+      "line": 1475,
+      "title": "A.2 Python evidence harness (deterministic tests)"
+    },
+    {
+      "kind": "subsection",
+      "line": 1485,
+      "title": "A.3 Notes on tool availability"
+    },
+    {
+      "kind": "section",
+      "line": 1492,
+      "title": "Appendix B: Lean formalization map"
+    },
+    {
+      "kind": "subsection",
+      "line": 1497,
+      "title": "B.1 What is mechanized"
+    },
+    {
+      "kind": "subsection",
+      "line": 1507,
+      "title": "B.2 File map and key declarations"
+    },
+    {
+      "kind": "subsection",
+      "line": 1525,
+      "title": "B.3 How to build"
+    },
+    {
+      "kind": "section",
+      "line": 1532,
+      "title": "Appendix C: Python evidence map"
+    },
+    {
+      "kind": "subsection",
+      "line": 1538,
+      "title": "C.1 How to run"
+    },
+    {
+      "kind": "subsection",
+      "line": 1542,
+      "title": "C.2 Evidence by theme (tests and scripts)"
+    },
+    {
+      "kind": "section",
+      "line": 1646,
+      "title": "Appendix D: Zeno cascades and depth"
+    },
+    {
+      "kind": "subsection",
+      "line": 1647,
+      "title": "Setup: frontier and Zeno criterion"
+    },
+    {
+      "kind": "subsection",
+      "line": 1660,
+      "title": "Bridges, ports, and accounting"
+    },
+    {
+      "kind": "subsection",
+      "line": 1675,
+      "title": "Storage-based activity and the WORK quantum (Option B)"
+    },
+    {
+      "context": "Appendix D: Zeno cascades and depth > Storage-based activity and the WORK quantum (Option B)",
+      "end_line": 1703,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:work-quantum",
+      "snippet": "[WORK from storage growth]\\label{lem:work-quantum} Assume that the passive-storage inequality \\eqref{eq:passive-storage}",
+      "start_line": 1696
+    },
+    {
+      "kind": "subsection",
+      "line": 1714,
+      "title": "Integrated throughput (ICAP) and feasibility \\texorpdfstring{$\\Rightarrow$"
+    },
+    {
+      "context": "Appendix D: Zeno cascades and depth > Integrated throughput (ICAP) and feasibility \\texorpdfstring{$\\Rightarrow$",
+      "end_line": 1743,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:latency-lb",
+      "snippet": "[Latency lower bound from WORK+ICAP+FEAS]\\label{lem:latency-lb} If Lemma~\\ref{lem:work-quantum} holds at boundary $j$, \\",
+      "start_line": 1733
+    },
+    {
+      "context": "Appendix D: Zeno cascades and depth > Integrated throughput (ICAP) and feasibility \\texorpdfstring{$\\Rightarrow$",
+      "end_line": 1756,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "[When the alignment hypothesis holds] Condition \\eqref{eq:align} is automatic for memoryless bridges and holds for memor",
+      "start_line": 1754
+    },
+    {
+      "kind": "subsection",
+      "line": 1758,
+      "title": "No-Zeno criterion via divergence"
+    },
+    {
+      "context": "Appendix D: Zeno cascades and depth > No-Zeno criterion via divergence",
+      "end_line": 1769,
+      "env": "theorem",
+      "kind": "env",
+      "label": "thm:no-zeno",
+      "snippet": "[No-Zeno from divergent reciprocal capacity]\\label{thm:no-zeno} Assume that for all sufficiently large $j$, Lemma~\\ref{l",
+      "start_line": 1762
+    },
+    {
+      "kind": "subsection",
+      "line": 1777,
+      "title": "Hard lemma slots (WORK/CAP/route)"
+    },
+    {
+      "kind": "subsection",
+      "line": 1810,
+      "title": "Checkable divergence criteria"
+    },
+    {
+      "kind": "subsection",
+      "line": 1825,
+      "title": "Toy model families (necessity witnesses)"
+    },
+    {
+      "kind": "subsection",
+      "line": 1848,
+      "title": "Decision tree (settlement frontier)"
+    },
+    {
+      "kind": "section",
+      "line": 1859,
+      "title": "Appendix E: Toolkit theory---defects"
+    },
+    {
+      "kind": "subsection",
+      "line": 1860,
+      "title": "Defects as quantitative relaxations of exact laws"
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Defects as quantitative relaxations of exact laws",
+      "end_line": 1884,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:tk-extreme-points",
+      "snippet": "[Extreme points attain the TV idempotence defect]\\label{rem:tk-extreme-points} Because $\\mu\\mapsto \\|\\mu(E^2-E)\\|_{\\math",
+      "start_line": 1877
+    },
+    {
+      "kind": "subsection",
+      "line": 1897,
+      "title": "Route dependence, capacity, and a one-step control inequality"
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Route dependence, capacity, and a one-step control inequality",
+      "end_line": 1940,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:tk-route-capacity",
+      "snippet": "[Route mismatch controls gain growth]\\label{lem:tk-route-capacity} In the default linear-operator setting above, the two",
+      "start_line": 1922
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Route dependence, capacity, and a one-step control inequality",
+      "end_line": 1965,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:tk-holonomy-no-teleology",
+      "snippet": "[Holonomy without teleology]\\label{rem:tk-holonomy-no-teleology} The purpose of $\\mathrm{RM}(j)$ is to quantify \\emph{ro",
+      "start_line": 1959
+    },
+    {
+      "kind": "subsection",
+      "line": 1967,
+      "title": "Bridge objects: ports, passivity, and integrated throughput"
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+      "end_line": 1992,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:tk-bridge-ports",
+      "snippet": "[Ports, causal bridge, and accounting]\\label{def:tk-bridge-ports} A \\emph{port space} is a finite-dimensional real Hilbe",
+      "start_line": 1975
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+      "end_line": 2003,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:tk-passive-storage",
+      "snippet": "[Passivity with storage]\\label{def:tk-passive-storage} A causal bridge $\\mathsf Z:\\mathcal U\\to\\mathcal U$ is \\emph{pass",
+      "start_line": 1994
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+      "end_line": 2015,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:tk-icap",
+      "snippet": "[Integrated capacity inequality (ICAP)]\\label{def:tk-icap} A causal bridge $\\mathsf Z:\\mathcal U\\to\\mathcal U$ satisfies",
+      "start_line": 2005
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+      "end_line": 2020,
+      "env": "remark",
+      "kind": "env",
+      "label": null,
+      "snippet": "The incremental (activated) form above avoids prehistory contamination in memory systems; a full-output per-subinterval ",
+      "start_line": 2017
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+      "end_line": 2026,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:tk-causal-compose",
+      "snippet": "[Causality is closed under composition]\\label{lem:tk-causal-compose} Assume the setup of Definition~\\ref{def:tk-bridge-p",
+      "start_line": 2022
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+      "end_line": 2043,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:tk-parallel-add",
+      "snippet": "[Parallel sum: passivity and ICAP constants add]\\label{lem:tk-parallel-add} Assume the setup of Definition~\\ref{def:tk-b",
+      "start_line": 2033
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+      "end_line": 2064,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:tk-serial-note",
+      "snippet": "[Serial composition: gain submultiplicativity is model-free; passivity needs port-compatibility]\\label{rem:tk-serial-not",
+      "start_line": 2056
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Bridge objects: ports, passivity, and integrated throughput",
+      "end_line": 2073,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:tk-bridge-to-primitives",
+      "snippet": "[Relation to primitives P5 and P6]\\label{rem:tk-bridge-to-primitives} In the main text, \\textbf{P5} (packaging) is expre",
+      "start_line": 2066
+    },
+    {
+      "kind": "subsection",
+      "line": 2075,
+      "title": "Emergent coercivity template via sector compression"
+    },
+    {
+      "kind": "subsection",
+      "line": 2077,
+      "title": "Summary: slots and divergence consequence"
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Summary: slots and divergence consequence",
+      "end_line": 2108,
+      "env": "theorem",
+      "kind": "env",
+      "label": "thm:ect-summary",
+      "snippet": "[ECT summary: linear ICAP capacity and DIV from three slots]\\label{thm:ect-summary} Fix a depth-indexed family of packag",
+      "start_line": 2079
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Summary: slots and divergence consequence",
+      "end_line": 2125,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:ect-nonimplication",
+      "snippet": "[Non-implication: why ECT is an add-on, not automatic]\\label{rem:ect-nonimplication} The ECT conclusion is \\emph{not} a ",
+      "start_line": 2115
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Summary: slots and divergence consequence",
+      "end_line": 2139,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:ect-atom",
+      "snippet": "[Atomic/sector decompositions of a packaged bridge {\\normalfont\\textsf{(ID: D-ECT-ATOM-01)}}]\\label{def:ect-atom} Fix a ",
+      "start_line": 2129
+    },
+    {
+      "kind": "subsection",
+      "line": 2141,
+      "title": "Dissipative atoms and semigroup decay"
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2154,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:ect-atom-ss",
+      "snippet": "[Dissipative atom representation {\\normalfont\\textsf{(ID: D-ECT-ATOM-SS-01)}}]\\label{def:ect-atom-ss} Let $\\mathsf Z_r$ ",
+      "start_line": 2142
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2164,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:ect-bal",
+      "snippet": "[Balanced coupling {\\normalfont\\textsf{(ID: D-ECT-BAL-01)}}]\\label{def:ect-bal} \\mbox{}\\par In the setting of Definition",
+      "start_line": 2156
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2179,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:ect-cap",
+      "snippet": "[ICAP capacity functional {\\normalfont\\textsf{(ID: D-ECT-CAP-01)}}]\\label{def:ect-cap} For a causal bridge $\\mathsf Z:\\m",
+      "start_line": 2166
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2188,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:ect-bal-kmass",
+      "snippet": "[Balanced decay implies a uniform kernel-mass bound {\\normalfont\\textsf{(ID: L-ECT-BAL-KMASS-01)}}]\\label{lem:ect-bal-km",
+      "start_line": 2181
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2218,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:ect-fmem",
+      "snippet": "[Finite kernel-mass convolution bridges satisfy ICAP for truncated inputs {\\normalfont\\textsf{(ID: L-ECT-FMEM-01)}}]\\lab",
+      "start_line": 2205
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2244,
+      "env": "corollary",
+      "kind": "env",
+      "label": "cor:ect-bal-icap",
+      "snippet": "[Balanced atoms have uniform ICAP]\\label{cor:ect-bal-icap} \\mbox{}\\par \\textbf{C-ECT-BAL-ICAP-01.}\\par Assume $\\mathsf Z",
+      "start_line": 2236
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2259,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:ect-p5-fmem",
+      "snippet": "[Finite-memory bridges as a P5 packaging target]\\label{rem:ect-p5-fmem} Lemma~\\ref{lem:ect-fmem} provides a concrete suf",
+      "start_line": 2254
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2278,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:ect-mech",
+      "snippet": "[Mechanical ECT: sector ICAP + mode count $\\Rightarrow$ linear capacity {\\normalfont\\textsf{(ID: L-ECT-MECH-01)}}]\\label",
+      "start_line": 2261
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2300,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:ect-div",
+      "snippet": "[DIV-ready chain]\\label{rem:ect-div} Fix a depth $j$ and interval $[t_j,t_{j+1}]$ with input $u_j$ and output $y_j=\\math",
+      "start_line": 2287
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Dissipative atoms and semigroup decay",
+      "end_line": 2308,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:ect-route",
+      "snippet": "[Route mismatch as an additive gain error]\\label{rem:ect-route} In the default linear-operator specialization of Appendi",
+      "start_line": 2302
+    },
+    {
+      "kind": "subsection",
+      "line": 2310,
+      "title": "Coercivity from feasibility gating (P2)"
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+      "end_line": 2329,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:ect-gate",
+      "snippet": "[Feasibility gate and induced coercive norm {\\normalfont\\textsf{(ID: D-ECT-GATE-01)}}]\\label{def:ect-gate} Fix a finite ",
+      "start_line": 2313
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+      "end_line": 2341,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:ect-coer-feas",
+      "snippet": "[Coercivity on the feasible set {\\normalfont\\textsf{(ID: L-ECT-COER-01)}}]\\label{lem:ect-coer-feas} Let $\\mathsf Z_j:\\ma",
+      "start_line": 2331
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+      "end_line": 2352,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:hl-p2-core",
+      "snippet": "[Hard slot HL-P2-CORE (P2 must eliminate lossless feasible directions)]\\label{rem:hl-p2-core} \\emph{Slot (HL-P2-CORE).} ",
+      "start_line": 2346
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+      "end_line": 2367,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:ect-shrink",
+      "snippet": "[Feasibility shrinkage $\\Rightarrow$ depth-scaled coercivity {\\normalfont\\textsf{(ID: L-ECT-SHRINK-01)}}]\\label{lem:ect-",
+      "start_line": 2354
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Coercivity from feasibility gating (P2)",
+      "end_line": 2376,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:ect-shrink-examples",
+      "snippet": "[Examples of depth scaling]\\label{rem:ect-shrink-examples} If $a_j \\gtrsim (j+1)$, then $c_j=a_j^2 \\gtrsim (j+1)^2$. If ",
+      "start_line": 2372
+    },
+    {
+      "kind": "subsection",
+      "line": 2378,
+      "title": "Mode compression from sectorization (P4) and minimality (P5)"
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+      "end_line": 2391,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:ect-sectorization",
+      "snippet": "[Sectorization of the port space {\\normalfont\\textsf{(ID: D-ECT-SECT-01)}}]\\label{def:ect-sectorization} Fix a depth $j$",
+      "start_line": 2381
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+      "end_line": 2403,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:ect-p5min",
+      "snippet": "[Sector-respecting minimal decompositions (P5-min) {\\normalfont\\textsf{(ID: D-ECT-P5MIN-01)}}]\\label{def:ect-p5min} Assu",
+      "start_line": 2393
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+      "end_line": 2413,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:ect-mode-ub",
+      "snippet": "[Sectorization bounds the minimal mode count {\\normalfont\\textsf{(ID: L-ECT-MODE-UB-01)}}]\\label{lem:ect-mode-ub} Assume",
+      "start_line": 2405
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+      "end_line": 2432,
+      "env": "definition",
+      "kind": "env",
+      "label": "def:ect-p4-idx",
+      "snippet": "[Quantized index hypothesis {\\normalfont\\textsf{(ID: D-ECT-P4IDX-01)}}]\\label{def:ect-p4-idx} \\mbox{}\\par Fix depth $j$ ",
+      "start_line": 2423
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+      "end_line": 2439,
+      "env": "lemma",
+      "kind": "env",
+      "label": "lem:ect-qsize",
+      "snippet": "[Quantized index implies linear sector count {\\normalfont\\textsf{(ID: L-ECT-QSIZE-01)}}]\\label{lem:ect-qsize} Under the ",
+      "start_line": 2434
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+      "end_line": 2452,
+      "env": "corollary",
+      "kind": "env",
+      "label": "cor:ect-hl1",
+      "snippet": "[Linear mode bound from P4 index {\\normalfont\\textsf{(ID: C-ECT-HL1-01)}}]\\label{cor:ect-hl1} \\mbox{}\\par Assume a secto",
+      "start_line": 2444
+    },
+    {
+      "context": "Appendix E: Toolkit theory---defects > Mode compression from sectorization (P4) and minimality (P5)",
+      "end_line": 2463,
+      "env": "remark",
+      "kind": "env",
+      "label": "rem:ect-slots",
+      "snippet": "[Hard lemma slots behind coercivity emergence]\\label{rem:ect-slots} Lemma~\\ref{lem:ect-mech} is purely algebraic. In app",
+      "start_line": 2458
+    },
+    {
+      "kind": "subsection",
+      "line": 2475,
+      "title": "Defect propagation rules (toolkit)"
+    }
+  ],
+  "meta": {
+    "counts": {
+      "env": 108,
+      "env_types": {
+        "corollary": 7,
+        "definition": 38,
+        "lemma": 18,
+        "remark": 34,
+        "theorem": 11
+      },
+      "section": 17,
+      "subsection": 55
+    },
+    "generated_at": "2026-01-26T19:06:32Z",
+    "sha256": "d60ab6f3326ea9035f0887d55a5feb56b051136e96300e02701db299068efc16",
+    "source_file": "paper.tex"
+  }
+}
