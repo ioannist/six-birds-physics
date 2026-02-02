@@ -31,6 +31,18 @@ These materials are intended as a reproducible "closure ledger" for comparing mu
 
 This is not a derivation of continuum limits or a claim about the foundations of quantum-to-classical transition.
 
+## Requirements
+
+- Python 3.8+
+- TeX Live with `latexmk` and `pdflatex`
+- `texlive-extra-utils` (provides `latexpand` for flattened TeX output)
+- Lean 4 / Lake (for formal proofs, optional for paper build)
+
+On Ubuntu/Debian:
+```bash
+sudo apt-get install texlive-latex-base texlive-latex-extra texlive-extra-utils latexmk
+```
+
 ## Build
 
 Build the paper PDF:

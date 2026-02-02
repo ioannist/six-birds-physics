@@ -32,6 +32,15 @@ run "$PY" "$ROOT_DIR/physics/python/export_lean_appendix.py"
 
 run bash -lc "cd \"$TEX_DIR\" && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=\"$OUT_DIR\" \"$MAIN\""
 
+# Generate flattened TeX file
+FLAT_TEX="$OUT_DIR/physics_instantiation_flat.tex"
+if command -v latexpand >/dev/null 2>&1; then
+  run bash -c "cd \"$TEX_DIR\" && latexpand \"$MAIN\" > \"$FLAT_TEX\""
+  echo "Flattened TeX: physics/build/physics_instantiation_flat.tex"
+else
+  echo "Warning: latexpand not found, skipping flattened TeX generation" >&2
+fi
+
 if [ ! -s "$OUT_DIR/physics_instantiation.pdf" ]; then
   echo "Error: PDF not produced or empty: $OUT_DIR/physics_instantiation.pdf" >&2
   exit 1
