@@ -1,0 +1,91 @@
+\section{Filtering/LES: route mismatch and the subgrid rewrite term}
+\label{sec:les}
+
+Large-eddy simulation (LES) is a standard setting where a coarse description is obtained by \emph{filtering} a fine-scale field, and where noncommutation between ``coarse then evolve'' and ``evolve then coarse'' is not a pathology but the central mechanism that produces a closure term \citep{germano1992,pope2000,sagaut2006,leonard1974,smagorinsky1963}. This section instantiates the Six-Birds route-mismatch diagnostic in a minimal nonlinear PDE toy: 1D viscous Burgers on a periodic grid.
+
+\subsection{Lens as a spatial filter}
+Let $u(x,t)$ be a fine-scale field (the micro description). Fix a filter kernel $G_\sigma$ (e.g.\ a Gaussian or box filter) with width $\sigma>0$, and define the filtered (macro) field
+\[
+  \bar{u}(x,t) := (G_\sigma * u)(x,t).
+\]
+This filtering operator is the lens $\Lens$ in Six-Birds language: it retains large-scale content and discards fine-scale fluctuations.
+Unlike the finite and quantum instantiations, filtering is not (and is not intended to be) invertible: there is no canonical completion $\Uf$ that reconstructs the full field from $\bar{u}$. In this section we therefore focus on the lens-only commutator $Q\circ T_\tau - T_\tau\circ Q$ and the induced rewrite term, rather than on an idempotent closure $E=\Uf\circ\Qf$.
+
+\subsection{Nonlinearity forces route mismatch}
+Consider viscous Burgers,
+\[
+  \partial_t u + \partial_x\!\left(\tfrac{1}{2}u^2\right) = \nu\,\partial_{xx}u.
+\]
+Filtering is linear, so it commutes with the viscous term. However, it does \emph{not} commute with the nonlinear flux:
+\[
+  \overline{u^2} \neq (\bar{u})^2 \quad \text{in general}.
+\]
+For a translation-invariant convolution filter on a periodic domain (our setting), filtering commutes with spatial derivatives, so the filtered equation can be written exactly as
+\[
+  \partial_t \bar u + \partial_x\!\left(\tfrac{1}{2}(\bar u)^2\right)
+  = \nu\,\partial_{xx}\bar u - \partial_x\!\left(\tfrac{1}{2}\tau_{\mathrm{sgs}}\right),
+  \qquad
+  \tau_{\mathrm{sgs}} := \overline{u^2} - (\bar u)^2.
+\]
+This is exactly the Six-Birds route mismatch at the PDE level: filtering after a nonlinear evolution step is not the same as evolving the filtered field under the same nonlinear rule.
+
+Operationally, we quantify the mismatch using a discrete time-stepper $T_\tau$ and compare the two routes:
+\[
+  \text{(A)}\quad \overline{T_\tau(u)} \qquad \text{versus}\qquad
+  \text{(B)}\quad T_\tau(\bar{u}).
+\]
+Their difference is the route mismatch. In our toy experiment, the mismatch magnitude increases with filter width $\sigma$ (Figure~\ref{fig:les-route-mismatch} and Table~\ref{tab:les-route-mismatch}), reflecting that stronger coarse-graining discards more of the nonlinear interaction structure.
+We report mismatch magnitude using a root-mean-square ($L^2$) norm over the spatial grid.
+\paragraph{Implementation note.}
+Our toy uses a pseudo-spectral derivative with RK4 time stepping in a viscous regime (fixed $\nu$ and a conservative $\Delta t$) over $t\in[0,1]$, and the code explicitly checks for NaNs/infs.
+These settings keep the solution smooth so that the reported mismatch primarily reflects noncommutation rather than numerical blowup.
+
+\subsection{The subgrid rewrite term}
+Filtering Burgers yields an exact equation for $\bar{u}$ with an additional term. A canonical way to express it is through the subgrid stress (or subgrid flux) identity
+\[
+  \tau_{\mathrm{sgs}}(x,t) := \overline{u^2}(x,t) - \bigl(\bar{u}(x,t)\bigr)^2.
+\]
+This quantity is identically zero for linear dynamics and generically nonzero for nonlinear dynamics. In Six-Birds terms, $\tau_{\mathrm{sgs}}$ is a \emph{rewrite term}: it is the structured correction required to make the filtered (macro) evolution match the filtered image of the micro evolution.
+
+Our toy computation evaluates $\tau_{\mathrm{sgs}}$ and reports its magnitude over time as a function of $\sigma$. The results show a clear scaling with filter width: larger $\sigma$ produces larger subgrid terms (Figure~\ref{fig:les-subgrid-term} and Table~\ref{tab:les-subgrid-term}).
+
+\subsection{Takeaway}
+LES exemplifies the ``layer as closure'' thesis in its most concrete form:
+\begin{itemize}
+  \item the lens is explicit (filtering),
+  \item route mismatch is unavoidable for nonlinear dynamics and is measurable,
+  \item the mismatch is not arbitrary noise; it induces an exact algebraic correction term, $\tau_{\mathrm{sgs}}$, which is the object that any practical closure model must approximate.
+\end{itemize}
+In this way, LES provides a physics-native illustration of the Six-Birds commutator picture: a macro layer becomes dynamically meaningful only after accounting for the structured mismatch between coarse-graining and nonlinear evolution.
+
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.9}
+\begin{minipage}[t]{0.48\linewidth}
+  \centering
+  \captionof{table}{LES route mismatch summary.}
+  \label{tab:les-route-mismatch}
+  \input{autogen/table_les_route_mismatch_tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+  \centering
+  \captionof{table}{LES subgrid term magnitude.}
+  \label{tab:les-subgrid-term}
+  \input{autogen/table_les_subgrid_term_tabular}
+\end{minipage}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{\figLesRouteMismatch}
+  \caption{LES route mismatch in viscous Burgers: RMS $L^2$ norm of $\overline{T_\tau(u)} - T_\tau(\bar u)$ over the spatial grid versus time, for several filter widths $\sigma$; the $\sigma=0$ control yields $\approx 0$.}
+  \label{fig:les-route-mismatch}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{\figLesSubgridTerm}
+  \caption{Subgrid stress magnitude: RMS $L^2$ norm of $\tau_{\mathrm{sgs}}=\overline{u^2}-(\bar u)^2$ versus time and filter width $\sigma$; the $\sigma=0$ control yields $\approx 0$.}
+  \label{fig:les-subgrid-term}
+\end{figure}

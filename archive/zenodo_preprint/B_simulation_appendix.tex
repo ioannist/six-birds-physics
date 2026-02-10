@@ -1,0 +1,72 @@
+\section{Simulation Appendix}
+\label{app:sims}
+
+This appendix records the discrepancy metrics used in the figures/tables and the default parameter settings used by the deterministic runners.
+
+\clearpage
+\begin{landscape}
+\begin{table}[p]
+\centering
+\footnotesize
+\begin{tabular}{lllll}
+\toprule
+Domain & Lens $Q$ & Completion $U$ & Audit & Null gate \\
+\midrule
+Quantum$\to$classical & diagonal & diagonal embed & rel.\ ent.\ (DPI) & $\lambda{=}1$ idem.; no viol. \\
+Kinetic$\to$fluids & moments $(\rho,u,\dots)$ & local equil. & TV/$L^1$ defects & collisions $\uparrow$ $\Rightarrow$ defect $\downarrow$ \\
+LES/filtering & spatial filter & (none) & $L^2$ mismatch & $\sigma{=}0 \Rightarrow$ mismatch ${\approx}0$ \\
+Averaging toy & coarse stats & max-ent & TV mismatch & $s{=}0 \Rightarrow$ mismatch ${\approx}0$ \\
+\bottomrule
+\end{tabular}
+\caption{Cross-domain certificate ledger: what is retained, how it is completed, which audit/mismatch is measured, and the null gate used.}
+\label{tab:certificate-ledger}
+\end{table}
+\end{landscape}
+\clearpage
+
+\subsection*{Quantum suite (Section~\ref{sec:quantum-classical})}
+\begin{itemize}
+  \item {\small\texttt{quantum/dpi.py}} $\to$ {\small\texttt{quantum\_dpi\_summary.csv}}, {\small\texttt{quantum\_dpi\_hist.png}}.\\
+  Metric: $S(\rho\|\sigma)-S(\Phi(\rho)\|\Phi(\sigma))$.
+  Default: $d\in\{2,3,4,6\}$, 300 trials per $d$, tol=$10^{-8}$, eps=$10^{-12}$.
+  Control: fails if any diff $<-\mathrm{tol}$.
+
+  \item {\small\texttt{quantum/closure.py}} $\to$ {\small\texttt{quantum\_closure\_idempotence.png}},\\
+  {\small\texttt{quantum\_route\_mismatch.*}}\\
+  Metrics: idempotence defect and route mismatch via trace distance $d_{\mathrm{tr}}(\rho,\sigma)=\tfrac12\|\rho-\sigma\|_1$.\\
+  Default: $d=4$, $\lambda\in\{0.5,0.7,0.85,0.93,0.97,1.0\}$, 200 time samples on $t\in[0,10]$.
+  Control: fails if defect at $\lambda=1$ exceeds tolerance or NaNs occur.
+\end{itemize}
+
+\subsection*{Kinetic/BGK suite (Section~\ref{sec:kinetic-fluids})}
+\begin{itemize}
+  \item {\small\texttt{fluids/bgk\_discrete.py}} $\to$ {\small\texttt{bgk\_idempotence\_defect.*}},\\
+  {\small\texttt{bgk\_summary.csv}}.\\
+  Metric: $\delta=\tfrac12\|E_\tau(E_\tau(f))-E_\tau(f)\|_1$ on flattened arrays.
+  Default: $N_x=16$, $N_v=3$, $\omega\in\{0,0.1,\dots,1.0\}$, $\tau\in\{1,2,5,10\}$, 200 trials.
+
+  \item {\small\texttt{fluids/bgk\_failure\_modes.py}} $\to$ {\small\texttt{bgk\_failure\_modes.*}}\\
+  Purpose: explicit regimes where closure degrades (weak collisions, wrong equilibrium, missing slow modes).
+\end{itemize}
+
+\subsection*{LES/Burgers suite (Section~\ref{sec:les})}
+\begin{itemize}
+  \item {\small\texttt{les/burgers\_1d.py}} $\to$ {\small\texttt{les\_route\_mismatch.*}}\\
+  Metric: RMS $L^2$ norm of $\overline{T_\tau(u)} - T_\tau(\bar{u})$.
+  Default: $N=128$, $\nu=0.1$, $\Delta t=0.002$, $t_{\max}=1.0$, multiple $\sigma$ including $\sigma=0$.
+
+  \item {\small\texttt{les/subgrid\_term.py}} $\to$ {\small\texttt{les\_subgrid\_term.*}}\\
+  Metric: RMS $L^2$ of $\tau_{\mathrm{sgs}}=\overline{u^2}-(\bar{u})^2$.
+  Control: $\sigma=0$ gives near-zero subgrid term.
+\end{itemize}
+
+\subsection*{Gravity suite (Section~\ref{sec:gravity})}
+\begin{itemize}
+  \item {\small\texttt{gravity/backreaction\_toy.py}} $\to$ {\small\texttt{gravity\_backreaction.*}}\\
+  Metric: $|\mathbb{E}[y(t)] - \tilde{y}(t)|$ (evolve-then-average vs average-then-evolve).
+  Default: $M=20000$, heterogeneity scale grid including $s=0$ (control).
+
+  \item {\small\texttt{gravity/packaging\_view.py}} $\to$ {\small\texttt{gravity\_packaging\_mismatch.*}}\\
+  Metrics: TV route mismatch between $E(T_t(\mu_0))$ and $T_t(E(\mu_0))$; closure idempotence.
+  Control: $s=0$ yields near-zero mismatch and defect.
+\end{itemize}

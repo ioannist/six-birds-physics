@@ -1,0 +1,5 @@
+\section{Lean Appendix}
+\label{app:lean}
+This appendix records the small Lean backbone we use as a conceptual anchor: finite-state lenses on \texttt{PMF} and their closures. We use Lean4 and mathlib for the formal backbone \citep{moura2021lean4,mathlib2020lean}. The current development focuses on a canonical equal-fiber partition lens (implemented as \texttt{Prod.fst : X×Fin m → X}) and its uniform-on-fibers completion. This is sufficient to certify idempotence from an explicit section, a factorization$\Rightarrow$commutation lemma, total-variation contraction under deterministic pushforward, and a basic definability counting fact. These Lean results are not intended to formalize the quantum or PDE examples; they serve as a correctness anchor for the abstract closure calculus.
+
+\input{autogen/lean_results}
