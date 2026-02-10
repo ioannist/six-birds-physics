@@ -15,7 +15,7 @@ The micro configuration is a nonnegative mass function $f(x,v)$ on a small perio
   \]
   where $\omega\in[0,1]$ controls the collision strength and $m(f)$ denotes the chosen moment fields.
 \end{enumerate}
-\paragraph{Discrete velocity and equilibrium family (toy specification).}
+\paragraph{Discrete velocity and equilibrium family (model specification).}
 In our implementation, the velocity set is the three-point lattice $V=\{-1,0,1\}$ and we normalize the total mass so that $\sum_{x\in\text{grid}}\sum_{v\in V} f(x,v)=1$; this lets us treat $f$ as a finite micro-distribution in the Six-Birds sense.
 The completion family $f_{\mathrm{eq}}$ is a discrete maximum-entropy (``Maxwellian-like'') equilibrium on $V$ subject to matching the retained local mass and momentum, i.e.\ $f_{\mathrm{eq}}(x,\cdot)$ is the unique exponential-family distribution on $\{-1,0,1\}$ whose moments agree with $\rho(x)$ and $u(x)$.
 The relaxation weight $\omega\in[0,1]$ should be read as a nondimensional collision strength: $\omega=0$ is free transport, while $\omega=1$ projects to local equilibrium at every step (qualitatively: shorter relaxation time / smaller Knudsen number in standard BGK settings).

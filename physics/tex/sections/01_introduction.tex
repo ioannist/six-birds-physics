@@ -7,18 +7,30 @@ Many physics ``theory transitions'' are implemented as scale choices: retain som
 
 What is often missing is a \emph{checkable, cross-domain way} to compare such closures: when does a proposed macro layer behave coherently, when does it preserve a chosen audit (data-processing), and when does it necessarily induce a structured mismatch term?
 
-This paper is a follow-up instantiation of the Six-Birds dictionary in several physics settings \citep{SixBirdsFramework}. We treat a layer as a choice of lens $\Qf$ (what is retained), completion $\Uf$ (how discarded information is completed), and a timescale evolution operator $T_\tau$, inducing a packaging operator $\Etauf=\Uf\circ\Qf\circ T_\tau$. The same three diagnostics recur across domains: closure coherence (idempotence), audit monotonicity, and route mismatch (noncommutation).
+\emph{Six Birds Theory} (SBT) is a closure-based emergence calculus introduced in~\citep{SixBirdsFramework}; readers unfamiliar with its primitives will find all required definitions self-contained in Section~\ref{sec:dictionary}. This is a \emph{research article}: it presents original computational results, mechanized proofs, and reproducible experiments that instantiate the SBT closure-audit language in four physics domains.
+
+This paper is a follow-up instantiation of the Six-Birds dictionary in several physics settings. We treat a layer as a choice of lens $\Qf$ (what is retained), completion $\Uf$ (how discarded information is completed), and a timescale evolution operator $T_\tau$, inducing a packaging operator $\Etauf=\Uf\circ\Qf\circ T_\tau$. The same three diagnostics recur across domains: closure coherence (idempotence), audit monotonicity, and route mismatch (noncommutation).
 
 \paragraph{Contributions (three-layer stack).}
 We (A) introduce a reusable closure-layer template aligned with the Six-Birds certificate loop, (B) operationalize it as a reproducible workflow that exports figures/tables from deterministic scripts and records Lean-certified backbone lemmas, and (C) demonstrate controlled null-vs-intervention separations in four instantiations (quantum dephasing, BGK-like moment closure, filtering/LES on Burgers, and nonlinear averaging/backreaction toy).
 
-\paragraph{Code availability.}
-The physics-instantiation repository is available at:
+\paragraph{Computational contributions.}
+From a computer science and information theory perspective, this paper delivers:
 \begin{itemize}[noitemsep,topsep=2pt]
-\item \url{https://github.com/ioannist/six-birds-physics}
+  \item Mechanized structural lemmas in Lean~4: section-based closure idempotence, factorization implies commutation, total-variation contraction under deterministic pushforward, and definability counting.
+  \item A reproducible Python simulation suite with deterministic seeding and hash-traceable artifacts across four physics domains.
+  \item Information-theoretic diagnostics (idempotence defect, route mismatch via trace distance and $L^2$ norms, audit monotonicity via quantum relative-entropy DPI) as operational certificates for model-reduction quality.
+  \item Explicit failure-mode documentation showing when and why closures degrade under misspecification.
 \end{itemize}
 
-\paragraph{How to read the paper.}
+\paragraph{Code availability.}
+The repository is available at:
+\begin{itemize}[noitemsep,topsep=2pt]
+\item \url{https://github.com/ioannist/six-birds-physics}
+\item Archived snapshot: \href{https://doi.org/10.5281/zenodo.18451876}{10.5281/zenodo.18451876}
+\end{itemize}
+
+\paragraph{Paper map.}
 Section~\ref{sec:dictionary} fixes the dictionary and notation; Section~\ref{sec:layers-closures} states the thesis and the cross-domain invariants.
 Sections~\ref{sec:quantum-classical}--\ref{sec:gravity} present instantiations.
 Appendix~\ref{app:lean} lists Lean-certified lemmas used as algebraic anchors, and Appendix~\ref{app:sims} records the discrepancy metrics and default run settings for the numerical certificates.

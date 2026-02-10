@@ -3,7 +3,7 @@
 
 This paper argues that several familiar ``theory transitions'' in physics can be fruitfully organized using the Six-Birds dictionary: a \emph{layer} is specified by a lens $\Lens$ (what is retained), a completion $\Uf$ (how missing information is filled in), and a timescale evolution operator $T_\tau$, inducing a packaging operator $\Etauf = \Uf\circ\Qf\circ T_\tau$. The goal is not to replace domain knowledge, but to provide a shared language for comparing closures across domains.
 
-This section makes explicit what we are and are not claiming, and records the main failure regimes that keep the story honest.
+This section makes explicit what we are and are not claiming, and records the main failure regimes that prevent overclaiming.
 
 \subsection{Scope: instantiations, not derivations}
 Our claims are \emph{structural}. We exhibit concrete choices of $(\Lens,\Uf,T_\tau)$ for which the same invariants recur:
@@ -63,3 +63,30 @@ We list concrete next steps that would strengthen the follow-up paper without ch
   \item Extend Lean coverage from deterministic lenses to simple stochastic lenses (Markov kernels) and connect to audit monotonicity in a more native formal setting.
   \item Add one or two ``composed layer'' experiments where closures are stacked (e.g.\ kinetic$\to$fluid then filter), testing how route mismatch compounds.
 \end{itemize}
+
+\section*{Declarations}
+
+\paragraph{Corresponding author.}
+Correspondence to Ioannis Tsiokos (\texttt{ioannis@automorph.io}).
+
+\paragraph{Competing interests.}
+The author declares no competing interests.
+
+\paragraph{Funding.}
+No external funding was received for this research.
+
+\paragraph{Ethics approval and consent to participate.}
+Not applicable; this study involves computational experiments only and uses no human participants, animal subjects, or personal data.
+
+\paragraph{Data availability.}
+All generated artifacts (CSV, PNG, and JSON files) are available in the repository and in the archived release. No external datasets were used; all data are produced by the included scripts.
+
+\paragraph{Code availability.}
+Source code is available at \url{https://github.com/ioannist/six-birds-physics}.
+Archived snapshot: \href{https://doi.org/10.5281/zenodo.18451876}{10.5281/zenodo.18451876}.
+
+\paragraph{Author contributions.}
+I.T.\ is the sole author and was responsible for conceptualization, methodology, software development, formal analysis, writing, and visualization.
+
+\paragraph{Use of AI/LLMs.}
+LLM tools (Claude, Anthropic) were used as coding assistants for software scaffolding and manuscript formatting. All scientific content, claims, and experimental design were produced by the author. LLM outputs were reviewed and validated before inclusion.
