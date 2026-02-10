@@ -1,7 +1,7 @@
 \section{Filtering/LES: route mismatch and the subgrid rewrite term}
 \label{sec:les}
 
-Large-eddy simulation (LES) is a standard setting where a coarse description is obtained by \emph{filtering} a fine-scale field, and where noncommutation between ``coarse then evolve'' and ``evolve then coarse'' is not a pathology but the central mechanism that produces a closure term \citep{germano1992,pope2000,sagaut2006,leonard1974,smagorinsky1963}. This section instantiates the Six-Birds route-mismatch diagnostic in a minimal nonlinear PDE toy: 1D viscous Burgers on a periodic grid.
+Large-eddy simulation (LES) is a standard setting where a coarse description is obtained by \emph{filtering} a fine-scale field, and where noncommutation between ``coarse then evolve'' and ``evolve then coarse'' is not a pathology but the central mechanism that produces a closure term \citep{germano1992,pope2000,sagaut2006,leonard1974,smagorinsky1963}. This section instantiates the Six-Birds route-mismatch diagnostic in a minimal nonlinear PDE model: 1D viscous Burgers on a periodic grid.
 
 \subsection{Lens as a spatial filter}
 Let $u(x,t)$ be a fine-scale field (the micro description). Fix a filter kernel $G_\sigma$ (e.g.\ a Gaussian or box filter) with width $\sigma>0$, and define the filtered (macro) field
@@ -34,10 +34,10 @@ Operationally, we quantify the mismatch using a discrete time-stepper $T_\tau$ a
   \text{(A)}\quad \overline{T_\tau(u)} \qquad \text{versus}\qquad
   \text{(B)}\quad T_\tau(\bar{u}).
 \]
-Their difference is the route mismatch. In our toy experiment, the mismatch magnitude increases with filter width $\sigma$ (Figure~\ref{fig:les-route-mismatch} and Table~\ref{tab:les-route-mismatch}), reflecting that stronger coarse-graining discards more of the nonlinear interaction structure.
+Their difference is the route mismatch. In this experiment, the mismatch magnitude increases with filter width $\sigma$ (Figure~\ref{fig:les-route-mismatch} and Table~\ref{tab:les-route-mismatch}), reflecting that stronger coarse-graining discards more of the nonlinear interaction structure.
 We report mismatch magnitude using a root-mean-square ($L^2$) norm over the spatial grid.
 \paragraph{Implementation note.}
-Our toy uses a pseudo-spectral derivative with RK4 time stepping in a viscous regime (fixed $\nu$ and a conservative $\Delta t$) over $t\in[0,1]$, and the code explicitly checks for NaNs/infs.
+The implementation uses a pseudo-spectral derivative with RK4 time stepping in a viscous regime (fixed $\nu$ and a conservative $\Delta t$) over $t\in[0,1]$, and the code explicitly checks for NaNs/infs.
 These settings keep the solution smooth so that the reported mismatch primarily reflects noncommutation rather than numerical blowup.
 
 \subsection{The subgrid rewrite term}
@@ -47,7 +47,7 @@ Filtering Burgers yields an exact equation for $\bar{u}$ with an additional term
 \]
 This quantity is identically zero for linear dynamics and generically nonzero for nonlinear dynamics. In Six-Birds terms, $\tau_{\mathrm{sgs}}$ is a \emph{rewrite term}: it is the structured correction required to make the filtered (macro) evolution match the filtered image of the micro evolution.
 
-Our toy computation evaluates $\tau_{\mathrm{sgs}}$ and reports its magnitude over time as a function of $\sigma$. The results show a clear scaling with filter width: larger $\sigma$ produces larger subgrid terms (Figure~\ref{fig:les-subgrid-term} and Table~\ref{tab:les-subgrid-term}).
+Our computation evaluates $\tau_{\mathrm{sgs}}$ and reports its magnitude over time as a function of $\sigma$. The results show a clear scaling with filter width: larger $\sigma$ produces larger subgrid terms (Figure~\ref{fig:les-subgrid-term} and Table~\ref{tab:les-subgrid-term}).
 
 \subsection{Takeaway}
 LES exemplifies the ``layer as closure'' thesis in its most concrete form:

@@ -1,4 +1,4 @@
-\section{Gravity/backreaction toy: nonlinear averaging as route mismatch}
+\section{Gravity/backreaction model: nonlinear averaging as route mismatch}
 \label{sec:gravity}
 
 A recurring theme in gravitational modeling is that \emph{averaging} and \emph{dynamics} do not commute. In full general relativity, the Einstein equations are nonlinear, and coarse-graining (spatial averaging, smoothing, or fitting an effective homogeneous model) can produce effective correction terms often discussed under the umbrella of ``backreaction'' \citep{buchert2000,buchert2001,clarkson2011,greenwald2011}. We do not attempt to model GR directly here. Instead, we isolate the structural point in a minimal setting where the mechanism is unambiguous: \emph{nonlinearity alone} is enough to generate a mismatch between ``evolve then average'' and ``average then evolve.''
@@ -36,7 +36,7 @@ Figure~\ref{fig:gravity-backreaction} plots the mismatch magnitude as a function
 Table~\ref{tab:gravity-backreaction} summarizes the same trend with a compact ``max mismatch over time'' statistic across heterogeneity settings.
 
 \subsection{Packaging view in $(\Qf,\Uf,E)$ language}
-We can rewrite the same toy in explicit closure form to match the operator template used throughout the paper. Treat the micro state at time $t$ as a distribution $\mu_t$ over micro values. Choose a coarse lens $\Qf$ that extracts a small set of coarse statistics (e.g.\ mean and variance). Choose a completion $\Uf$ that reconstructs a canonical micro distribution consistent with those coarse statistics (in our toy, a Gaussian-style completion is convenient). This induces a closure
+We can rewrite the same toy in explicit closure form to match the operator template used throughout the paper. Treat the micro state at time $t$ as a distribution $\mu_t$ over micro values. Choose a coarse lens $\Qf$ that extracts a small set of coarse statistics (e.g.\ mean and variance). Choose a completion $\Uf$ that reconstructs a canonical micro distribution consistent with those coarse statistics (in this model, a Gaussian-style completion is convenient). This induces a closure
 \[
   E_f := \Uf\circ\Qf.
 \]
@@ -56,7 +56,7 @@ Figure~\ref{fig:gravity-packaging-mismatch} visualizes the mismatch measured in 
 This separation matches the general Six-Birds lesson: \emph{coherent packaging} (idempotence) does not guarantee \emph{dynamical closure} (commutation).
 
 \subsection{Takeaway}
-This toy illustrates the gravitational moral in a form that is portable across domains: when the micro dynamics is nonlinear and the macro lens discards heterogeneity, route mismatch is generically produced. In full GR, the corresponding mismatch is one way to understand why fitting an averaged effective model can require additional correction terms---a ``backreaction'' in the broad structural sense.
+This model illustrates the gravitational observation in a form that is portable across domains: when the micro dynamics is nonlinear and the macro lens discards heterogeneity, route mismatch is generically produced. In full GR, the corresponding mismatch is one way to understand why fitting an averaged effective model can require additional correction terms---a ``backreaction'' in the broad structural sense.
 
 \input{autogen/table_gravity_backreaction}
 \input{autogen/table_gravity_packaging}
@@ -64,7 +64,7 @@ This toy illustrates the gravitational moral in a form that is portable across d
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.9\linewidth]{\figGravityBackreaction}
-  \caption{Nonlinear averaging mismatch (backreaction toy): absolute difference between ``evolve then average'' and ``average then evolve'' for $y'=y^2$ versus time and heterogeneity scale $s$; the $s=0$ control yields $\approx 0$.}
+  \caption{Nonlinear averaging mismatch (backreaction model): absolute difference between ``evolve then average'' and ``average then evolve'' for $y'=y^2$ versus time and heterogeneity scale $s$; the $s=0$ control yields $\approx 0$.}
   \label{fig:gravity-backreaction}
 \end{figure}
 

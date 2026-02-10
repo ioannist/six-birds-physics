@@ -34,7 +34,7 @@ The repo includes explicit failure modes to avoid overclaiming.
 
   \item \textbf{LES mismatch is structural (Section~\ref{sec:les}).} For nonlinear evolution, filtering and dynamics generically do not commute. This is not a bug; it is precisely what produces a deterministic correction term (the rewrite/subgrid term). A closure that ignores this term is predictably biased.
 
-  \item \textbf{Averaging mismatch under nonlinearity (Section~\ref{sec:gravity}).} When heterogeneity is present, ``average then evolve'' and ``evolve then average'' disagree even in simple nonlinear toys. Any macro layer that discards heterogeneity must either accept this mismatch or expand the macro description to carry additional statistics.
+  \item \textbf{Averaging mismatch under nonlinearity (Section~\ref{sec:gravity}).} When heterogeneity is present, ``average then evolve'' and ``evolve then average'' disagree even in simple nonlinear models. Any macro layer that discards heterogeneity must either accept this mismatch or expand the macro description to carry additional statistics.
 \end{itemize}
 
 \subsection{Audits: what is certified versus what is only checked numerically}
@@ -50,15 +50,15 @@ Each instantiation is intentionally minimal; this is a feature (clarity) and a l
 \begin{itemize}
   \item \textbf{Quantum.} Dephasing is a clean closure, but it is not ``the'' quantum-to-classical limit; basis choice matters, and semiclassical limits involve additional structure. Our point is the closure template (exact idempotence + audit monotonicity + route mismatch with coherent dynamics), not a foundational claim.
 
-  \item \textbf{Kinetic/fluid.} The BGK-like discrete model is a toy: it demonstrates moment-lens closure behavior and failure regimes, but it is not a derivation of Navier--Stokes.
+  \item \textbf{Kinetic/fluid.} The BGK-like discrete model is a minimal model: it demonstrates moment-lens closure behavior and failure regimes, but it is not a derivation of Navier--Stokes.
 
-  \item \textbf{LES.} Burgers is a toy nonlinear PDE; the same commutator logic applies in more realistic settings, but quantitative scaling and tensor structure are substantially more complex in 3D turbulence.
+  \item \textbf{LES.} Burgers is a minimal nonlinear PDE; the same commutator logic applies in more realistic settings, but quantitative scaling and tensor structure are substantially more complex in 3D turbulence.
 
   \item \textbf{Gravity.} Our example is not GR; it isolates the nonlinearity/\linebreak averaging mechanism. Connecting this to geometric averaging schemes is future work.
 \end{itemize}
 
 \subsection{Near-term extensions}
-We list concrete next steps that would strengthen the follow-up paper without changing its thesis.
+We list concrete next steps that would strengthen subsequent work without changing its thesis.
 \begin{itemize}
   \item Extend Lean coverage from deterministic lenses to simple stochastic lenses (Markov kernels) and connect to audit monotonicity in a more native formal setting.
   \item Add one or two ``composed layer'' experiments where closures are stacked (e.g.\ kinetic$\to$fluid then filter), testing how route mismatch compounds.

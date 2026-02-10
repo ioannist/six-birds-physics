@@ -68,7 +68,7 @@ Moment closures are useful precisely because they compress state; they also fail
 Figure~\ref{fig:bgk-failure-modes} visualizes these regimes, and Table~\ref{tab:bgk-failure-modes} provides compact numerical summaries.
 
 \subsection{Takeaway}
-This instantiation captures a standard physics moral in Six-Birds form: the ``fluid layer'' is a closure built from a moment lens and an equilibrium completion. Its coherence improves when the underlying dynamics mixes rapidly within the discarded degrees of freedom (here controlled by $\omega$), and it fails in recognizable regimes when the equilibrium ansatz or the retained moments are mismatched to the dynamics.
+This instantiation captures a standard observation from physics in Six-Birds form: the ``fluid layer'' is a closure built from a moment lens and an equilibrium completion. Its coherence improves when the underlying dynamics mixes rapidly within the discarded degrees of freedom (here controlled by $\omega$), and it fails in recognizable regimes when the equilibrium ansatz or the retained moments are mismatched to the dynamics.
 
 \input{autogen/table_bgk_endpoints}
 \input{autogen/table_bgk_failure_modes}
@@ -76,13 +76,13 @@ This instantiation captures a standard physics moral in Six-Birds form: the ``fl
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.9\linewidth]{\figBgkIdempotenceDefect}
-  \caption{Moment-closure coherence in a discrete BGK toy: mean idempotence defect $\delta=\tfrac12\|E_\tau(E_\tau(f)) - E_\tau(f)\|_1$ on flattened arrays versus collision strength $\omega$ and timescale $\tau$ (averaged over random initial conditions).}
+  \caption{Moment-closure coherence in a discrete BGK model: mean idempotence defect $\delta=\tfrac12\|E_\tau(E_\tau(f)) - E_\tau(f)\|_1$ on flattened arrays versus collision strength $\omega$ and timescale $\tau$ (averaged over random initial conditions).}
   \label{fig:bgk-idempotence-defect}
 \end{figure}
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.9\linewidth]{\figBgkFailureModes}
-  \caption{Explicit moment-closure failure regimes in the same BGK toy (weak collisions/strong gradients, wrong equilibrium family, missing slow mode). Metrics reported match Table~\ref{tab:bgk-failure-modes}.}
+  \caption{Explicit moment-closure failure regimes in the same BGK model (weak collisions/strong gradients, wrong equilibrium family, missing slow mode). Metrics reported match Table~\ref{tab:bgk-failure-modes}.}
   \label{fig:bgk-failure-modes}
 \end{figure}
